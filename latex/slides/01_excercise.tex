@@ -8,8 +8,6 @@
 % TODO Change the topic of the lesson
 \title{Grundlagen - Übung}
 \date{\today}
-
-
 \begin{document}
 
 \maketitle
@@ -52,11 +50,47 @@
 \end{frame}
 
 
-\section{Übung 3 - String-Methods}
+\section{Übung 3 - String-Methoden}
 
 \begin{frame}{3. Aufgabe}
-	test3
+	\textbf{Schritt 1}
+	
+	Mit der Dokumentation auf dieser Seite
+	\href{https://docs.python.org/3/library/stdtypes.html\#string-methods}{https://docs.python.org/3/library/stdtypes.html\#string-methods}
+	Schreibe ein script, dass einen Input-String annimmt und prüft ob folgende bedingungen wahr sind:
+	
+	\begin{itemize}
+		\item[(1.)] der String ist großgeschrieben
+		\item[(2.)] der String besteht aus Zahlen
+		\item[(3.)] im String kommt diese sequenz vor: ':-)'
+		\item[(4.)] keine der vorherigen Bedingungen ist wahr
+	\end{itemize}
+	
+	Gib aus welcher der Fälle eingetreten ist. Wenn mehrere zutreffend sind, reicht es einen anzugeben. \linebreak
+	Substrings erkennen: mit \textit{in} kann nach Teilelementen und auch Teilstrings gesucht werden. \linebreak
+	Python hat kein switch case statement, nur if, else, elif (statt else if).
 \end{frame}
-
+\begin{frame}
+	\textbf{Schritt 2}
+	\linebreak
+	Gib im 1. Fall, wenn der String großgeschrieben ist, zusätzlich den String als kleingeschriebene Variante aus.
+	\linebreak
+	
+	\textbf{Schritt 3}
+	\linebreak
+	Im 2. Fall, wenn eine Zahl eingegeben wurden, lass das Script nach einer weiteren fragen und gib die Summe aus.
+	\linebreak
+	Der Konstruktor eines Typs kann benutzt werden um einen anderen Wert in diesen Typ umzuwandeln. z.B. str(), int()
+	\linebreak
+\end{frame}
+\begin{frame}
+	\textbf{Schritt 4}
+	\linebreak
+	Im 4. Fall, wenn kein anderer Fall eingetreten ist, trenne den Eingabestring an jedem 'a', und füge die Teile wieder zusammen, und ergänze ein semicolon zwischen jedem der Teile.
+	\linebreak
+	Strings können mit \textit{split(separator)} an einem Septerator getrennt werden.
+	\linebreak
+	Und mit \textit{separator\_string.join(['list', 'of', 'strings'])} zusammengefügt werden.
+\end{frame}
 
 \end{document}
