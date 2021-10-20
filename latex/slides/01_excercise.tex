@@ -72,8 +72,27 @@
 \section{Übung 2 - Strings}
 
 \begin{frame}{2. Aufgabe}
-	test2
+	Strings, wie verbindet und formatiert man sie?
+	
+	Tipp: möglichst oft den code testen um früh Fehler zu finden
+	
+	\textbf{Schritt 1:}
+	
+	Mit dem \textit{input()} Befehl kann eine Eingabe aus der command line gelesen und in einer Variable abgelegt werden: \textit{var = input()}. An der Stelle, wo \textit{input()} aufgerufen wird, pausiert das Script, bis eine Eingabe gegeben wurde.
+	
+	Schreibe ein script, dass einen input string von der command line liest und \textit{'Hello '} ausgibt, wo bei der eingelesene String angehangen wird. Du kannst f-Strings verwenden oder die strings einfach mit + verbinden.
 \end{frame}
+\begin{frame}
+	\textbf{Schritt 2:}
+	Erweitere das Script nun um eine Startnachricht, die vor der input abfrage ausgegeben wird und nach einem Namen fragt: \textit{input("message")}. Gib eine Willkommensnachricht aus. Zum Beispiel: "Hello NAME, welcome to python" wobei NAME durch den input ersetzt werden soll. Dafür können f-Strings, die format funktion verwendet werden.
+	\linebreak
+	f-Strings funktionieren so: \textit{f"hallo \{'oma'\}, willkommen"} -$>$ \textit{"hallo oma, willkommen"}
+	\linebreak
+	
+	\textbf{Schritt 3}	
+	Frage nun nach dem Vor und Nachnamen seperat und baue die Werte in den Ausgabestring ein.
+\end{frame}
+
 
 \section{Übung 3 - String-Methods}
 
