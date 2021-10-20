@@ -16,3 +16,11 @@
 
 'string %(number)d %(name)s' % {number:4, name:'vier'}
 # via Name
+
+# mit f strings
+
+f'my string {4} {"vier"}'
+# mit f vor dem String, und geschweiften Klammern"
+
+f"my string {4} {'vier'}"
+# oder so
