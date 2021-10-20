@@ -22,7 +22,49 @@
 \section{Übung 1 - Hello World}
 
 \begin{frame}{1. Aufgabe}
-	test1
+	\textbf{Schritt 1:}
+	
+	Starte den Interpreter mit dem Befehl \textit{python3} auf der Konsole und gebe 'Hello World' mithilfe der Funktion \textit{print()} aus. Mit der Funktion \textit{exit()} kannst du den Interpreter wieder verlassen.
+\linebreak
+
+	\textbf{Schritt 2:}
+	
+	Schreibe ein Python-Script im Editor, welches die gleiche Funktion wie aus Schritt 1 enthält.
+	
+	Führe das Script mit dem Befehl \textit{python3 script.py} aus. Was passiert?
+	
+\end{frame}
+
+\begin{frame}{1. Aufgabe}
+	\textbf{Schritt 3:}
+	
+	Schreibe das \textit{print()}-Statement nun in eine Funktion.
+	
+	Führe das Script erneut aus. Was hat sich verändert?
+	
+	Führe das Script mit dem Befehl \textit{python3 -i script.py} interaktiv aus. Sobald der Interpreter gestartet ist, rufe deine Funktion auf. 
+\linebreak
+
+	\textbf{Schritt 4:}
+	
+	Rufe im Script die Funktion im Top Level auf.
+	
+	Führe das Script erneut aus.
+	
+	Öffne den Interpreter mit \textit{python3} im selben Verzeichnis, wo sich dein Script befindet und importiere es dort: \textit{import yourscript} (Beachte, dass am Ende kein ’.py’ steht). Was passiert?
+	
+\end{frame}
+
+\begin{frame}{1. Aufgabe}
+	\textbf{Schritt 5:}
+	
+	Füge im Script den Boilerplate Code hinzu und rufe deine Funktion im \textit{if}-Block auf. Beachte die Einrückung!
+	
+	\lstinputlisting[firstline=8]{resources/01_getting_started/hello_world.py}
+	
+	Führe das Script noch einmal aus.
+	
+	Starte den Interpreter und importiere dein Script erneut. Was hat sich verändert?
 \end{frame}
 
 \section{Übung 2 - Strings}
@@ -30,17 +72,18 @@
 \begin{frame}{2. Aufgabe}
 	Strings, wie verbindet und formatiert man sie?
 	
-	Tipp: möglichst oft den code testen um früh Fehler zu finden
+	Tipp: möglichst oft den Code testen, um früh Fehler zu finden
 	
 	\textbf{Schritt 1:}
 	
 	Mit dem \textit{input()} Befehl kann eine Eingabe aus der command line gelesen und in einer Variable abgelegt werden: \textit{var = input()}. An der Stelle, wo \textit{input()} aufgerufen wird, pausiert das Script, bis eine Eingabe gegeben wurde.
 	
-	Schreibe ein script, dass einen input string von der command line liest und \textit{'Hello '} ausgibt, wo bei der eingelesene String angehangen wird. Du kannst f-Strings verwenden oder die strings einfach mit + verbinden.
+	Schreibe ein Script, dass einen input string von der command line liest und \textit{'Hello '} ausgibt, wobei der eingelesene String angehangen wird. Du kannst f-Strings verwenden, oder die strings einfach mit + verbinden.
 \end{frame}
 \begin{frame}
 	\textbf{Schritt 2:}
-	Erweitere das Script nun um eine Startnachricht, die vor der input abfrage ausgegeben wird und nach einem Namen fragt: \textit{input("message")}. Gib eine Willkommensnachricht aus. Zum Beispiel: "Hello NAME, welcome to python" wobei NAME durch den input ersetzt werden soll. Dafür können f-Strings, die format funktion verwendet werden.
+	
+	Erweitere das Script nun um eine Startnachricht, die vor der input Abfrage ausgegeben wird und nach einem Namen fragt: \textit{input("message")}. Gib eine Willkommensnachricht aus. Zum Beispiel: "Hello NAME, welcome to python", wobei NAME durch den input ersetzt werden soll. Dafür können f-Strings oder die format Funktion verwendet werden.
 	\linebreak
 	f-Strings funktionieren so: \textit{f"hallo \{'oma'\}, willkommen"} -$>$ \textit{"hallo oma, willkommen"}
 	\linebreak
