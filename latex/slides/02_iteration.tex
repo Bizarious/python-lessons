@@ -5,7 +5,7 @@
 \input{../templates/course_information}
 
 % Presentation title
-\title{Iteration Übung}
+\title{Zahlen, Listen und Iteration}
 \date{28. Oktober 2021}
 
 
@@ -18,6 +18,46 @@
 	\tableofcontents
 \end{frame}
 
+\section{Zahlen}
+\begin{frame}{Zahlen}
+	\textbf{Die zwei Typen}
+	\linebreak
+	
+	Python kennt zwei verschiedene Zahlentypen: 
+	\begin{itemize}
+		\item \alert{\texttt{int}} (Integer/Ganzzahl)
+		\lstinputlisting[firstline=0,lastline=2]{resources/02iteration/numbers.py}
+		\item \alert{\texttt{float}} (floating point number/Gleitkommazahl)
+		\lstinputlisting[firstline=4,lastline=5]{resources/02iteration/numbers.py}
+	\end{itemize}		
+\end{frame}
+
+\begin{frame}{Zahlen}
+	\textbf{Mathematische Operationen}
+	\linebreak
+
+	Auf allen Zahlen sind verschiedene mathematische Operationen möglich:
+	\lstinputlisting[firstline=7,lastline=11]{resources/02iteration/numbers.py}
+	\begin{description}
+		\item[\textbf{Achtung:}] Das Ergebnis wird bei der Division automatisch zu einem \alert{\texttt{float}} konvertiert, selbst dann, wenn es keinen Rest gibt.
+	\end{description}
+\end{frame}
+
+\begin{frame}{Zahlen}
+	Man kann auch bestehende Variablen einfach mit einem Ergebnis überschreiben, ohne eine neue Variable anlegen zu müssen:
+	\lstinputlisting[firstline=13,lastline=15]{resources/02iteration/numbers.py}
+	Dafür bietet Python eine Abkürzung:
+	\lstinputlisting[firstline=17,lastline=20]{resources/02iteration/numbers.py}
+\end{frame}
+
+\begin{frame}{Zahlen}
+	\textbf{Vergleichsoperationen}
+	\linebreak
+	
+	Es sind mehrere Vergleichsoperationen möglich. Jede dieser Operationen resultiert in einem \alert{\texttt{bool}}:		
+	\lstinputlisting[firstline=22,lastline=27]{resources/02iteration/numbers.py}
+	Alle Ausdrücke in diesem Beispiel nehmen den Wert \alert{\texttt{True}} an.
+\end{frame}
 
 \section{Listen}
 \begin{frame}{Listen}
@@ -35,6 +75,16 @@
 
 \section{while Schleife}
 	\begin{frame}{while Schleife}
-		test
+		Die \alert{\texttt{while}}-Schleife prüft vor jeder Iteration, ob eine gegebene Bedingung den Wert \alert{\texttt{True}} besitzt:
+		\lstinputlisting[firstline=0,lastline=2]{resources/02iteration/while_loop.py}
+		Die Schleife bricht erst ab, wenn die Bedingung den Wert \alert{\texttt{False}} annimmt:
+		\lstinputlisting[firstline=4,lastline=9]{resources/02iteration/while_loop.py}
+	\end{frame}
+	
+	\begin{frame}{while Schleife}
+	Die Bedingung muss während der Schleifenausführung verändert werden, sonst ist die Schleife endlos:
+	\lstinputlisting[firstline=11,lastline=13]{resources/02iteration/while_loop.py}
+	Wie bei der \alert{\texttt{for}}-Schleife gibt es auch hier das \alert{\texttt{break}}-Statement, womit man die Schleife auch unabhängig der Bedingung unterbrechen kann:
+	\lstinputlisting[firstline=14,lastline=18]{resources/02iteration/while_loop.py}
 	\end{frame}
 \end{document}
