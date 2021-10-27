@@ -9,6 +9,7 @@ number = 5 - 3 # Subtraktion
 number = 5 * 3 # Multiplikation
 number = 5 / 3 # Division
 number = 5 % 3 # Modulo
+number = 5 ** 3 # Potenz
 
 number = 5
 number = number + 3
