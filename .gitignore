@@ -17,6 +17,8 @@ token.js
 *.snm
 *.fdb_latexmk
 *.fls
+*.bbl
+*.blg
 *.synctex.gz
 .DS_Store
 _site/
