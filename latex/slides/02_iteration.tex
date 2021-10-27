@@ -43,13 +43,13 @@
 % Problemfolie
 \begin{frame}{Wiederholung}
 	\begin{itemize}
-		\item navigation mir dem Terminal in das richtige directory
+		\item Navigation mir dem Terminal in das richtige directory
 		\begin{figure}
 			\includegraphics[width=\linewidth]{resources/02iteration/commandlinepython.png}
 		\end{figure}
 		
 		\item
-		starten eines python scripts
+		starten eines Python-Scripts
 		\lstinputlisting[firstline=0,lastline=2]{resources/02iteration/python.txt}
 		\item
 		IndentationError: tritt z.B. auf, wenn Tabs und Leerzeichen nicht konsistent benutzt werden, oder bei flaschen Einrückungen
@@ -123,7 +123,7 @@
 \end{frame}
 
 \begin{frame}{for in Schleife}
-	Die \alert{\texttt{range()}}-Funktion gibt eine Sequenz aus Zahlen zurück. Grundsätzlich gibt sie, bei der Eingabe \textit{n}, die Zahlen 0 bis \textit{n}-1 zurück. In diesem Beispiel also würde die Variable \alert{\texttt{i}} nacheinander die Werte 0 bis 999 annehmen
+	Die \alert{\texttt{range()}}-Funktion gibt eine Sequenz aus Zahlen zurück. Grundsätzlich gibt sie, bei der Eingabe \textit{n}, die Zahlen 0 bis \textit{n}-1 zurück. In diesem Beispiel also würde die Variable \alert{\texttt{i}} nacheinander die Werte 0 bis 999 annehmen:
 	\lstinputlisting[firstline=0,lastline=3]{resources/02iteration/for_loop.py}
 	\begin{description}
 		\item[\textbf{Achtung:}] Die durch die \alert{\texttt{for}}-Schleife definierte Variable bleibt auch nach Beendigung der Schleife noch erhalten. Sie besitzt dann den Wert, den sie nach der letzten Iteration hatte (hier also 999).
