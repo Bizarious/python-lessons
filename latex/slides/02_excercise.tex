@@ -21,7 +21,7 @@
 
 \section{Übung 1 - Zahlen und Listen}
 \begin{frame}{Übung 1}
-	Schreibe ein Programm, welches folgendes tut:
+	Schreibe ein Programm, welches nacheinander folgende Aufgaben erfüllt:
 	\linebreak
 	
 	\begin{itemize}
@@ -31,6 +31,47 @@
 		\item[\textbf{4.}] Entferne das zweite Element und hänge es hinten an die Liste wieder an.
 		\item[\textbf{Zusatz}] Prüfe, ob das erste Element kleiner ist als das zweite. Wenn das so ist, füge hinten an die Liste \alert{\texttt{True}} an, ansonsten \alert{\texttt{False}}.
 	\end{itemize}
+	Die Liste nach Schritt 4: [13, 20, 7]
+	
+	Die Liste nach Zusatz: [13, 20, 7, True]
+	
+\end{frame}
+
+\section{Übung 2 - Die \alert{\texttt{for}}-Schleife}	
+\begin{frame}{Übung 2}
+	Schreibe ein Programm, welches folgende Aufgaben erfüllt:
+	\linebreak
+	\begin{itemize}
+		\item[\textbf{1.}] Erstelle eine leere Liste und fülle diese mithilfe einer \alert{\texttt{for}}-Schleife mit den Zahlen 1 bis 100.
+		\item[\textbf{2.}] Addiere alle Zahlen in der Liste zusammen und gib das Ergebnis aus.
+		\item[\textbf{3.}] Erstelle zwei neue leere Listen, eine für gerade und eine für ungerade Zahlen. Iteriere nun durch die originiale Liste und ordne die Elemente den gerade erstellten Listen zu.
+		\end{itemize}
+\end{frame}
+
+\section{Übung 3 - Die \alert{\texttt{while}}-Schleife}
+\begin{frame}{Übung 3}
+Schreibe ein Programm, welches folgende Aufgaben erfüllt:
+	\linebreak
+	\begin{itemize}
+		\item[\textbf{1.}] Definiere ein Passwort. Erfrage vom Nutzer solange dieses Passwort, bis er es richtig eingegeben hat.
+		\item[\textbf{2.}] Sammle alle falsch eingegebenen Passwörter in einer Liste und gebe diese Liste am Ende als ganzes aus. Gib zusätzlich noch die Anzahl der benötigten Versuche aus.
+		\item[\textbf{3.}] Erlaube nur eine maximale Anzahl von Versuchen. Lass den Nutzer über das Terminal diese Anzahl vorher eingeben.
+		\begin{itemize}
+			\item[\textbf{Tipp 1:}] Mithilfe der \alert{\texttt{int()}}-Funktion kannst du Strings in Zahlen konvertieren.
+			\item[\textbf{Tipp 2:}] Denke daran, dass du mit dem \alert{\texttt{break}}-Statement die Schleife vorzeitig abbrechen kannst.
+			\item[\textbf{Tipp 3:}] Die \alert{\texttt{len()}}-Funktion gibt die Anzahl der Elemente einer Liste zurück. Gebe die Liste hierfür als Argument in die Funktion.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\section{Zusatz - Listen in Listen}
+\begin{frame}{Zusatz}
+	Füge folgende Liste in dein Script ein:
+	\lstinputlisting[firstline=0,lastline=1]{resources/02iteration/nested_list.py}
+	Zwei Listen, deren Summe der Elemente gleich sind, bilden ein Paar. Zähle für jede Teilliste, wie viele Paarpartner in der Gesamtliste vorhanden sind. Schreibe die Anzahl für jede Teilliste in eine neue Liste und gebe diese am Ende aus.
+	
+	\textbf{Beispiel:}
+	\lstinputlisting[firstline=3,lastline=7]{resources/02iteration/nested_list.py}
 	
 \end{frame}
 
