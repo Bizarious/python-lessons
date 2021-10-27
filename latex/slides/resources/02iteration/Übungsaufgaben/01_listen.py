@@ -18,7 +18,7 @@ print(f"3# nach Addition: {liste}")
 liste.append(liste.pop(1))
 print(f"4# nach hinten anhängen: {liste}")
 
-# ZUSATZ# überprüfe ob das 2. Elment kleiner ist als das dritte
+# ZUSATZ# überprüfe ob das 1. Element kleiner ist als das 2.
 # falls ja, füge an die Liste True an ansonsten False
 liste.append(liste[0] < liste[1])
 print(f"ZUSATZ# nach kleiner Check: {liste}")
