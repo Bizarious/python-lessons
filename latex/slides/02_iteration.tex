@@ -8,6 +8,7 @@
 \title{Zahlen, Listen und Schleifen}
 \date{28. Oktober 2021}
 
+\usepackage{graphicx}
 
 \begin{document}
 	
@@ -16,6 +17,45 @@
 \begin{frame}{Gliederung}
 	\setbeamertemplate{section in toc}[sections numbered]
 	\tableofcontents
+\end{frame}
+
+
+\section{Wiederholung}
+\begin{frame}{Wiederholung}
+	\textbf{Beim letzten Mal}:
+	\begin{itemize}
+		
+		
+		\item
+		der Python Interpreter
+		\item
+		"Hallo Welt" mit der \alert{\texttt{print()}} Funktion 
+		\item Interaktion mit dem Terminal mit \alert{\texttt{input()}}
+		\item
+		string Formatierung mit f-Strings
+		\lstinputlisting[firstline=22,lastline=22]{resources/01_getting_started/string_format.py}
+		\item \alert{\texttt{if / else / elif}} statements
+		\item string methoden z.B. \alert{\texttt{isnumeric(), isupper()}}
+		
+		
+	\end{itemize}
+\end{frame}
+% Problemfolie
+\begin{frame}{Wiederholung}
+	\begin{itemize}
+		\item navigation mir dem Terminal in das richtige directory
+		\begin{figure}
+			\includegraphics[width=\linewidth]{resources/02iteration/commandlinepython.png}
+		\end{figure}
+		
+		\item
+		starten eines python scripts
+		\lstinputlisting[firstline=0,lastline=2]{resources/02iteration/python.txt}
+		\item
+		IndentationError: tritt z.B. auf, wenn Tabs und Leerzeichen nicht konsistent benutzt werden, oder bei flaschen Einrückungen
+		\lstinputlisting[lastline=4]{resources/02iteration/bad_indentation.py}
+		
+	\end{itemize}
 \end{frame}
 
 \section{Zahlen}
