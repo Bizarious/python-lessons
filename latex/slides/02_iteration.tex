@@ -76,11 +76,18 @@
 
 \section{for in Schleife}
 \begin{frame}{for in Schleife}
-	die Zahlen von 0 bis 999 durchgehen:
-	\lstinputlisting[firstline=0,lastline=3]{resources/02iteration/for_loop.py}
-	Objekte, die 'iterable' sind, elementweise durchgehen:
+	Die \alert{\texttt{for}}-Schleife wird genutzt, um über eine Sequenz zu iterieren, z.B. Listen oder Strings. Dabei definiert sie eine Variable, die nach jeder Iteration den Wert des nächsten Elementes annimmt:
 	\lstinputlisting[firstline=5,lastline=8]{resources/02iteration/for_loop.py}
 	\lstinputlisting[firstline=10,lastline=13]{resources/02iteration/for_loop.py}
+	Die Schleife bricht automatisch ab, wenn es kein nächstes Element mehr gibt.
+\end{frame}
+
+\begin{frame}{for in Schleife}
+	Die \alert{\texttt{range()}}-Funktion gibt eine Sequenz aus Zahlen zurück. Grundsätzlich gibt sie, bei der Eingabe \textit{n}, die Zahlen 0 bis \textit{n}-1 zurück. In diesem Beispiel also würde die Variable \alert{\texttt{i}} nacheinander die Werte 0 bis 999 annehmen
+	\lstinputlisting[firstline=0,lastline=3]{resources/02iteration/for_loop.py}
+	\begin{description}
+		\item[\textbf{Achtung:}] Die durch die \alert{\texttt{for}}-Schleife definierte Variable bleibt auch nach Beendigung der Schleife noch erhalten. Sie besitzt dann den Wert, den sie nach der letzten Iteration hatte (hier also 999).
+	\end{description}
 \end{frame}
 
 \section{while Schleife}
@@ -94,7 +101,7 @@
 	\begin{frame}{while Schleife}
 	Die Bedingung muss während der Schleifenausführung verändert werden, sonst ist die Schleife endlos:
 	\lstinputlisting[firstline=11,lastline=13]{resources/02iteration/while_loop.py}
-	Wie bei der \alert{\texttt{for}}-Schleife gibt es auch hier das \alert{\texttt{break}}-Statement, womit man die Schleife auch unabhängig der Bedingung unterbrechen kann:
+	Man kann das \alert{\texttt{break}}-Statement verwenden, um die Schleife auch unabhängig der Bedingung zu unterbrechen (geht auch bei der \alert{\texttt{for}}-Schleife):
 	\lstinputlisting[firstline=14,lastline=18]{resources/02iteration/while_loop.py}
 	\end{frame}
 \end{document}
