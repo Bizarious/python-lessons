@@ -31,8 +31,41 @@
 \end{frame}
 
 \section{Funktionen}
-\begin{frame}{Funktionen}
-	test
+\begin{frame}{Funktionen - Einleitung}
+		\Large $$ f(x) = 3x^5 + 8x^4 + 42x^3 + x $$
+\end{frame}
+
+\begin{frame}{Funktionen - Einleitung}
+	Funktionen sind immer dann gut geeignet, wenn man den selben Code an mehreren Stellen ausführen muss.
+		
+	Zum Beispiel ist es einfacher, \alert{\texttt{print()}} zu benutzen, als jedes Mal den kompletten Code dieser Funktion in sein eigenes Programm zu kopieren.
+\end{frame}
+
+\begin{frame}{Funktionen - Aufbau}
+	Die einfachst mögliche Funktion könnte so aussehen:
+	\lstinputlisting[lastline=2]{resources/03bool_fun_dict/func.py}
+	\pause
+	Jede Funktion besteht aus folgenden Teilen:
+	\pause
+	\begin{itemize}
+		\item dem Schlüsselwort \alert{\texttt{def}}
+		\pause
+		\item dem Name der Funktion - grundsätzlich beliebig, aber man sollte  die Konvention beachten (alles klein, mehrere Worte mit Unterstrich trennen)
+		\pause
+		\item zwei Runde Klammern, in denen Argumente definiert werden können
+		\pause
+		\item dem Code, der ausgeführt werden soll, eingerückt unter dem Funktionskopf. \textbf{Man kann in einer Funktion alles machen, was man auch außerhalb kann.}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Funktionen - Aufruf}
+	Der Code innerhalb einer Funktion wird nicht sofort ausgeführt, wenn die Funktion definiert wird, stattdessen muss man sie explizit aufrufen:
+	\lstinputlisting[firstline=4, lastline=5]{resources/03bool_fun_dict/func.py}
+\end{frame}
+
+\begin{frame}{Funktionen - Aufruf}
+	Der Code innerhalb einer Funktion wird nicht sofort ausgeführt, wenn die Funktion definiert wird, stattdessen muss man sie explizit aufrufen:
+	\lstinputlisting[firstline=4, lastline=5]{resources/03bool_fun_dict/func.py}
 \end{frame}
 
 \section{Dictionaries}
