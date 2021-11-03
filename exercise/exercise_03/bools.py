@@ -1,4 +1,4 @@
-# Aufgabe 1: Der letzte Versuch
+# Der letzte Versuch
 # Definiert 3 Variablen (gelernt, glueck, aufgepasst) die True oder False sind.
 gelernt = True
 glueck = True
