@@ -35,6 +35,23 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{Slices}
+	Um mehrere Elemente einer Liste auszuwählen, kann folgende Notation verwendet werden: \texttt{[Start:Ende]}. Dabei können jeweils Start und Ende optional weggelassen werden. Bei jedem solchen Zugriff wird eine neue Liste erzeugt.
+	\linebreak
+	Beispiele:
+	\begin{center}
+		\begin{tabular}{m{4cm} | m{1cm}}
+			\hline\hline
+			liste = [0,1,2,3,4,5,6] & Wert \\
+			\hline\hline
+			\texttt{liste[2:4]} & [2,3] \\
+			\texttt{liste[3:]} & [3,4,5,6] \\
+			\texttt{liste[:3]} & [0,1,2] \\
+			\texttt{liste[:]} & [0,1,2,3,4,5,6]
+		\end{tabular}
+	\end{center}
+\end{frame}
+
 \section{Booleans}
 \begin{frame}{Booleans}
 	Booleans können die Werte \alert{\texttt{True}} oder \alert{\texttt{False}} annehmen.
