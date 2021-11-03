@@ -116,10 +116,13 @@
 \begin{frame}{Funktionen - Return}
 	Möchte man einen Wert zurückgeben, ihn also auch außerhalb der Funktion noch verwenden, kann man das mit dem \alert{\texttt{return}}-Statement tun:
 	\lstinputlisting[firstline=14, lastline=18]{resources/03bool_fun_dict/func.py}
+	Das \alert{\texttt{return}}-Statement bricht die Funktion ab. Alles was danach noch käme, wird nicht mehr ausgeführt.
 \end{frame}
 
 \begin{frame}{Funktionen - Default Argumente}
-	Man kann Argumenten Default-Werte mitgeben. Somit wird dieses Argument optional und muss nicht zwingend während des Aufrufs belegt werden. Gibt man ihm trotzdem einen Wert, so wird der Default-Wert überschrieben.
+	Man kann Argumenten Default-Werte mitgeben. Somit wird dieses Argument optional und muss nicht zwingend während des Aufrufs belegt werden. Gibt man ihm trotzdem einen Wert, so wird der Default-Wert überschrieben:
+	\lstinputlisting[firstline=20, lastline=24]{resources/03bool_fun_dict/func.py}
+	Default Argumente müssen in den Klammern der Funktionsdefinition immer als letztes angegeben werden.
 \end{frame}
 
 \end{document}
