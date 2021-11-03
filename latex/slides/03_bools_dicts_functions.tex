@@ -9,6 +9,7 @@
 \date{28. Oktober 2021}
 
 \usepackage{graphicx}
+\usepackage{array}
 
 \begin{document}
 	
@@ -27,8 +28,43 @@
 
 \section{Booleans}
 \begin{frame}{Booleans}
-	test	
+	Booleans können die Werte \alert{\texttt{True}} oder \alert{\texttt{False}} annehmen.
+	\linebreak
+	Die Keywords \alert{\texttt{and}}, \alert{\texttt{or}} können benutzt werden um Booleans logisch zu verbinden.
+	\linebreak
+	Mit \alert{\texttt{not}} kann ein Boolean invertiert werden:
+
+	\begin{center}
+	\begin{tabular}{c | c}
+		\hline\hline
+		mit Operator & Wert \\
+		\hline\hline
+		\texttt{True and False} & False \\
+		\texttt{True and True} & True \\
+		\texttt{True or False} & True \\
+		\texttt{False or False} & False \\
+		\hline\hline
+		\texttt{not True} & False \\
+		\texttt{not False} & True \\
+		\texttt{not not True} & True
+	\end{tabular}
+	\end{center}
 \end{frame}
+
+\begin{frame}{Booleans}
+	Kombinationen der Operatoren sind auch möglich. Dabei können Klammern gesetzt werden um die Reihenfolge der Auswertung zu bestimmen. Wenn keine gesetzt werden, wird \alert{\texttt{and}} vor \alert{\texttt{or}} ausgewertet. \alert{\texttt{not}} wird zuallererst ausgewertet.
+	\begin{center}
+		\begin{tabular}{m{8cm} | m{1cm}}
+			\hline\hline
+			mit Operator & Wert \\
+			\hline\hline
+			\texttt{False and True or True} & True \\
+			\texttt{False and (True or True)} & False \\
+			\texttt{(not not not False and True and not True) or (True and True)} & ?
+		\end{tabular}
+	\end{center}
+\end{frame}
+
 
 \section{Funktionen}
 \begin{frame}{Funktionen - Einleitung}
