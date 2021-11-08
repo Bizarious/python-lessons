@@ -58,7 +58,17 @@
 \end{frame}
 
 \begin{frame}{Tuples - Warum ?}
-	Warum Tuples benutzen wenn Listen mehr können ?
+	Warum Tuples benutzen wenn Listen mehr können ? Es kommt auf den Fall an.
+	\linebreak\linebreak
+	\textbf{Tuples sind gut für:}
+	\begin{itemize}
+		\pause
+		\item statische Daten: verhindern das ausversehen Daten verändert werden die als Konstanten gemeint sind
+		\pause
+		\item vielen Daten (die keine Listenfunktionialität benötigen): werden schneller verarbeitet als Listen
+		\pause
+		\item als Keys für Dictionaries: da sie immutable sind können Tuples als Key verwendet werden (Listen nicht)
+	\end{itemize}
 \end{frame}	
 
 \end{document}
