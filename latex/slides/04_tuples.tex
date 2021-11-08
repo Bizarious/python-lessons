@@ -5,11 +5,8 @@
 \input{../templates/course_information}
 
 % Presentation title
-\title{Booleans und Funktionen}
+\title{Tuples}
 \date{4. November 2021}
-
-\usepackage{graphicx}
-\usepackage{array}
 
 \begin{document}
 	
@@ -25,11 +22,43 @@
 	
 \end{frame}
 
-\section{Tuples} 
+\section{Tuples}
 \begin{frame}{Tuples}
-	
+	Tuple ist ein Datentyp, der ähnlich der Liste ist.
+	\begin{center}
+		\begin{tabular}{m{6cm} | m{2cm} | m{2cm}}
+			\hline\hline
+			Eigenschaft & Liste & Tuple \\
+			\hline\hline
+			enthält mehrere Elemente & \cmark & \cmark \\ 
+			\pause
+			geordnet & \cmark & \cmark \\ \pause
+			kann mit \codeline{[i]} indexiert werden (Elemente herausgreifen) & \cmark & \cmark \\ \hline
+			\pause
+			Elemente können angehangen / gelöscht werden & \cmark & \xmark \\ \pause
+			Werte von Elementen können neu zugewiesen werden & \cmark & \xmark \\
+			\pause
+			Referenzverhalten & mutable & immutable \\
+		\end{tabular}
+	\end{center}
 \end{frame}
 
+\begin{frame}{Tuples - Beispiele}
+	Initialisierung ähnlich der Liste, \codeline{()} statt \codeline{[]}
+	\lstinputlisting[firstline=1, lastline=2]{resources/04tuples/tuples.py}
+	\pause
+	Einzelne Elemente herausgreifen genau wie bei Listen. Slices funktionieren auch.
+	\lstinputlisting[firstline=5, lastline=8]{resources/04tuples/tuples.py}
+	\pause
+	Aber! Elemente neu zu setzen ist nicht möglich:
+	\lstinputlisting[firstline=10, lastline=10]{resources/04tuples/tuples.py}
+	\pause
+	Nur das gesamte Tuple kann neu gesetzt werden:
+	\lstinputlisting[firstline=12, lastline=12]{resources/04tuples/tuples.py}
+\end{frame}
 
+\begin{frame}{Tuples - Warum ?}
+	Warum Tuples benutzen wenn Listen mehr können ?
+\end{frame}	
 
 \end{document}

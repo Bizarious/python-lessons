@@ -8,7 +8,9 @@
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{multicol}
-
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\usepackage{graphicx}
+\usepackage{array}
 
 % color definitions
 \definecolor{mygreen}{rgb}{0,0.6,0}
@@ -73,3 +75,5 @@
 \newcommand{\codeline}[1]{
 	\alert{\texttt{#1}}
 }
+\newcommand{\cmark}{\color{green}\ding{51}}%
+\newcommand{\xmark}{\color{red}\ding{55}}%
