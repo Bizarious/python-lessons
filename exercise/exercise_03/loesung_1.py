@@ -1,4 +1,4 @@
-# Lösungen für "Booleans und Funktionent"
+# Lösungen für "Booleans und Funktionen"
 # Aufgabe 1
 
 #### Es geht um den letzten Prüfungsversuch eines Studenten. ####

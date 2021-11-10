@@ -1,4 +1,4 @@
-# Lösungen für "Booleans und Funktionent"
+# Lösungen für "Booleans und Funktionen"
 # Aufgabe 2
 
 
@@ -12,13 +12,15 @@ def two_of_three(b1, b2, b3):
     return b1 and b2 or b1 and b3 or b2 and b3
 
 #### Definiere eine Funktion, die die Funktion aus 1. mit allen ####
-#### möglichen Kombinationen der Argumente wiederholt aufruft. ####
+#### möglichen Kombinationen der Argumente wiederholt aufruft, ####
+#### also True True True, True True False, True False True und so weiter. #### 
 
 # Diese dreifach verschachtelte for-Schleife ist nicht unbedingt direkt
 # ersichtlich. Spiele im Kopf durch, was hier genau passiert:
 # In jeder Iteration wird die Funktion von oben mit anderen Parametern
 # aufgerufen und zwar jeweils immer mit den aktuellen Schleifenvariablen
-# b1, b2 und b3.
+# b1, b2 und b3. Das führt dazu, dass jede mögliche Kombination einmal
+# dran kommt.
 def alle_varianten():
     for b1 in [True, False]:
         for b2 in [True, False]:
