@@ -10,6 +10,7 @@ def sort_types(types):
     return d
 
 a = sort_types([2, "5", True, False, "6", 42, None])
+print("# 2.1:")
 print(a)
 
 # 2.2.
@@ -22,6 +23,7 @@ def sort_types_2(types):
         d[name].append(t)
     return d
 
+print("# 2.2:")
 print(sort_types_2([42, "as", 2, 3, "df", True, None, False, True, None]))
 
 # 3.1.
@@ -34,6 +36,7 @@ def count_values(d):
             count[d[i]] += 1
     return count
 
+print("# 3.1:")
 print(count_values({1: True, "lksajd": False, None: "ad", 5: 42, "sad": "lsakdjl", 92: 42}))
 
 # 3.2.
@@ -44,6 +47,7 @@ def get_max(d):
             max_key, max_value = key, d[key]
     return max_key
 
+print("# 3.2:")
 print(get_max({"x": 1, "y": 4, "z": 2}))
 
 
@@ -54,7 +58,7 @@ def calculate_sums(input_list):
     output = []
     for a,b in input_list:
         if (a,b) in cache.keys():
-            print("answer from cache")
+            print(f"answer from cache for {(a,b)}")
             output.append(cache[(a,b)])
         else:
             result = a + b
@@ -64,7 +68,5 @@ def calculate_sums(input_list):
     return output
 
 input_list = [(1, 2), (65, 7), (4, 5), (65, 7)]
-calculate_sums(input_list)
-
-
-
+print("# 3.Z:")
+print(f"result sums: {calculate_sums(input_list)}")
