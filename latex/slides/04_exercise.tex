@@ -25,10 +25,38 @@
 	\begin{itemize}
 		\item[\textbf{1.}] Schreibe eine Funktion, die zwei 2-dimensionale Punkte A und B (jeweils als Tupel) entgegennimmt und den Vektor AB als Tupel zurückgibt.
 		\begin{itemize}
-			\item[\textbf{Bsp.:}] A = (3, 5), B = (-1, -2), Ergebnis: (-4, -7)
+			\item[\textbf{Bsp.:}]\codeline{A = (3, 5), B = (-1, -2), Ergebnis: (-4, -7)}
 		\end{itemize}
 		\item[\textbf{2.}] Modifiziere die Funktion so, dass sie nun Vektoren beliebiger Dimension berechnen kann. Der Einfachheit halber gehen wir davon aus, dass beide Punkte die selbe Dimension haben.
 	\end{itemize}
 \end{frame}
+
+\begin{frame}{Übung 2}
+	\begin{itemize}
+		\item[\textbf{1.}] Es ist eine Liste von Variablen verschiedener Typen gegeben. Schreibe eine Funktion, die ein dictionary zurück gibt, in dem die Variablen als Keys verwendet werden und ihr jeweiliger Typ als Value.
+		\begin{itemize}
+			\item[\textbf{Bsp.:}] \codeline{[1, 'hallo'] Ergebnis: \{1: 'int', 'hallo': 'str'\}}
+		\end{itemize}
+		\item[\textbf{2.}] Definiere eine zweite Funktion, die stattdessen den Typ einer Variable als Key verwendet. Alle Variablen eines Typs sollen, in einer Liste als Value für den jeweiligen Key, abgespeichert werden.
+		\begin{itemize}
+			\item[\textbf{Bsp.:}]\codeline{[1, 2, 4, 'hallo', 'ok'] Ergebnis: \{'int': [1, 2, 4], 'str': ['hallo', 'ok']\}}
+		\end{itemize}
+		\end{itemize}
+\end{frame}
+
+\begin{frame}{Übung 3}
+	\begin{itemize}
+		\item[\textbf{1.}] Gegeben ist ein Dictionary. Schreibe eine Funktion, welche zählt, wie oft jedes Value vorkommt und ein Dictionary ausgibt, in dem die jeweiligen Values auf die Anzahl ihres Vorkommens gemappt werden.
+		\begin{itemize}
+			\item[\textbf{Bsp.:}]\codeline{\{'hallo': 'eins', 'x': 'eins', 'hi': 'ok'\} Ergebnis: \{'eins': 2, 'ok': 1\}}
+		\end{itemize}
+	
+		\item[\textbf{2.}] Benutze die in \textbf{1.} definierte funktion, um von einem gegebenen Dictionary die Value zu bestimmen, die am häufigsten vorkommt.
+		\begin{itemize}
+			\item[\textbf{Bsp.:}]\codeline{\{'eins': 2, 'ok': 1\} Ergebnis: 'eins'}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
 
 \end{document}
