@@ -37,3 +37,34 @@ def count_values(d):
 print(count_values({1: True, "lksajd": False, None: "ad", 5: 42, "sad": "lsakdjl", 92: 42}))
 
 # 3.2.
+def get_max(d):
+    max_key, max_value = None, 0
+    for key in d:
+        if d[key] >= max_value:
+            max_key, max_value = key, d[key]
+    return max_key
+
+print(get_max({"x": 1, "y": 4, "z": 2}))
+
+
+
+# 3.Zusatz
+def calculate_sums(input_list):
+    cache = {}
+    output = []
+    for a,b in input_list:
+        if (a,b) in cache.keys():
+            print("answer from cache")
+            output.append(cache[(a,b)])
+        else:
+            result = a + b
+            output.append(result)
+            cache[(a,b)] = result
+    print(f"finaler cache Zustand: {cache}")
+    return output
+
+input_list = [(1, 2), (65, 7), (4, 5), (65, 7)]
+calculate_sums(input_list)
+
+
+
