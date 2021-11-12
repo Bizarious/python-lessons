@@ -30,7 +30,33 @@
 
 \section{Klassen und Objekte}
 \begin{frame}{Klassen und Objekte}
+	Menschen denken in Objekten, denen Eigenschaften und Funktionen zugeordet werden. \linebreak
+	\begin{center}
+		 \textbf{Ein Rennwagen ist schnell, und die Kuh macht "muh".} \linebreak
+	\end{center}
+	Desswegen eignet sich dieses Konzept gut um Code intuitiv zu strukturieren.
+\end{frame}
+\begin{frame}{bekannte Beispiele}
+	Listen: \codeline{liste.append('element')}
+	\linebreak
+	Dictionaries: \codeline{dictionary.keys()}
+	\linebreak
 	
+	Die \codeline{keys()}-Funktion ist Teil des Dictionary Objekts. Eine Liste z.B. hat keine \codeline{keys()}-Funktion. 
+	\linebreak\linebreak
+	\codeline{liste.keys()} wird fehlschlagen.	
+\end{frame}
+
+\begin{frame}
+	Mit dem Punkt \codeline{.} kann auf die Funktionen des Objekts und Attribute zugegriffen werden.
+	\lstinputlisting[firstline=13,lastline=13]{resources/05mutation_klassen/einleitung_klassen.py}
+	Mit den Klammern wird angezeigt, dass man eine Funktion des Objekts ausführen will.
+	\lstinputlisting[firstline=14,lastline=14]{resources/05mutation_klassen/einleitung_klassen.py}
+\end{frame}
+\begin{frame}{Klassen / Objekte selbst definieren}
+	Um ein Objekt zu erhalten, muss zunächst eine Klasse definiert werden. Anschließend muss diese Klasse ausgeführt (instanziiert) werden. Die \codeline{\_\_init\_\_} Funktion wird jedesmal aufgerufen, wenn eine neue Instanz der Klasse erzeugt wird (Konstruktor).
+	\lstinputlisting[firstline=0,lastline=5]{resources/05mutation_klassen/einleitung_klassen.py}
+	\lstinputlisting[firstline=13,lastline=13]{resources/05mutation_klassen/einleitung_klassen.py}
 \end{frame}
 
 \end{document}
