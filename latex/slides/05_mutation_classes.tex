@@ -23,9 +23,30 @@
 \end{frame}
 
 
-\section{Mutation}
-\begin{frame}{Mutation}
+\section{Referenzen und Mutation}
+\begin{frame}{Referenzen}
+	Python benutzt ein Konzept namens \alert{"Call by Object-Reference"}. 
 	
+	Alle Objekte, die in einem Programm auftauchen, liegen im Arbeitsspeicher. Variablen dienen dann dazu, um diesen Objekten einen Namen, eine sogenannte \alert{Referenz} zu geben. 
+	
+	Variablen sind also nicht ihre Objekte selber, sondern bloß Bezeichner für diese.
+\end{frame}
+
+\begin{frame}{Referenzen}
+	\lstinputlisting[firstline=1,lastline=2]{resources/05mutation_klassen/reference.py}
+	Führt man diesen Code aus, so legt Python den String 'Hallo Welt' irgendwo in den Arbeitsspeicher. 
+	
+	Die Variable \codeline{hallo} ist nun die Referenz. Greift man auf sie zu, so folgt Python der Referenz in den Arbeitsspeicher und liest dort das eigentliche Objekt aus.
+\end{frame}
+
+\begin{frame}{Referenzen}
+	Ein Objekt kann auch mehrere Bezeichner haben.
+	\lstinputlisting[firstline=4,lastline=5]{resources/05mutation_klassen/reference.py}
+	Hier ist \codeline{a} der Name für eine Liste. In Zeile 2 wird nun nicht die Liste kopiert, sondern nur die Referenz darauf. \codeline{b} ist also nur ein weiterer Bezeichner für \textit{dieselbe} Liste.
+	
+	Dieser Sachverhalt wird deutlich, wenn wir versuchen, \codeline{b} zu verändern:
+	\lstinputlisting[firstline=7,lastline=7]{resources/05mutation_klassen/reference.py}
+	Python folgt \codeline{b} bis zu der Liste und fügt eine \texttt{2} an. Da \codeline{a} immer noch eine Referenz auf dieselbe Liste hat, wird die Veränderung auch ersichtlich, wenn wir uns \codeline{a} statt \codeline{b} anschauen.
 \end{frame}
 
 \section{Klassen und Objekte}
@@ -34,7 +55,7 @@
 	\begin{center}
 		 \textbf{Ein Rennwagen ist schnell, und die Kuh macht "muh".} \linebreak
 	\end{center}
-	Desswegen eignet sich dieses Konzept gut um Code intuitiv zu strukturieren.
+	Deswegen eignet sich dieses Konzept gut um Code intuitiv zu strukturieren.
 \end{frame}
 \begin{frame}{bekannte Beispiele}
 	Listen: \codeline{liste.append('element')}
@@ -59,7 +80,7 @@
 	\lstinputlisting[firstline=13,lastline=13]{resources/05mutation_klassen/einleitung_klassen.py}
 \end{frame}
 
-\section{Beispiel}
+\section*{Beispiel}
 \begin{frame}{Beispiel}
 	\textbf{Problemmodellierung:}
 	Pokemon
