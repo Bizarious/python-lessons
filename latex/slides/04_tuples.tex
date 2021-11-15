@@ -37,13 +37,13 @@
 			Eigenschaft & Liste & Tuple \\
 			\hline\hline
 			enthält mehrere Elemente & \cmark & \cmark \\ 
-			\pause
-			geordnet & \cmark & \cmark \\ \pause
+			
+			geordnet & \cmark & \cmark \\ 
 			kann mit \codeline{[i]} indexiert werden (Elemente herausgreifen) & \cmark & \cmark \\ \hline
-			\pause
-			Elemente können angehangen / gelöscht werden & \cmark & \xmark \\ \pause
+			
+			Elemente können angehangen / gelöscht werden & \cmark & \xmark \\ 
 			Werte von Elementen können neu zugewiesen werden & \cmark & \xmark \\
-			\pause
+			
 			Referenzverhalten & mutable & immutable \\
 		\end{tabular}
 	\end{center}
@@ -52,17 +52,17 @@
 \begin{frame}{Tupel - Beispiele}
 	Initialisierung ähnlich der Liste, \codeline{()} statt \codeline{[]}
 	\lstinputlisting[firstline=1, lastline=2]{resources/04tuples/tuples.py}
-	\pause
+	
 	Einzelne Elemente herausgreifen, genau wie bei Listen. Slices funktionieren auch.
 	\lstinputlisting[firstline=5, lastline=8]{resources/04tuples/tuples.py}
-	\pause
+	
 	Eine Liste zu einem Tuple umwandeln
 	\lstinputlisting[firstline=21, lastline=23]{resources/04tuples/tuples.py}
 \end{frame}
 \begin{frame}{Tupel - Beispile}
 	Aber! Elemente neu zu setzen ist nicht möglich:
 	\lstinputlisting[firstline=10, lastline=10]{resources/04tuples/tuples.py}
-	\pause
+	
 	Nur das gesamte Tuple kann neu gesetzt werden:
 	\lstinputlisting[firstline=12, lastline=12]{resources/04tuples/tuples.py}
 \end{frame}
@@ -72,11 +72,11 @@
 	\linebreak\linebreak
 	\textbf{Tuples sind gut für:}
 	\begin{itemize}
-		\pause
+		
 		\item statische Daten: verhindern, dass ausversehen Daten verändert werden, die als Konstanten gemeint sind
-		\pause
+		
 		\item vielen Daten (die keine Listenfunktionialität benötigen): werden schneller verarbeitet als Listen
-		\pause
+		
 		\item als Keys für Dictionaries: da sie immutable sind, können Tuples als Key verwendet werden (Listen nicht)
 	\end{itemize}
 \end{frame}	
@@ -93,10 +93,10 @@
 	\linebreak
 	Keys werden links, Values rechts angegeben.
 	\lstinputlisting[lastline=4]{resources/03bool_fun_dict/dicts.py}
-	\pause
+	
 	Mit dem Key kann der zugehörige Wert gelesen werden.
 	\lstinputlisting[firstline=6,lastline=7]{resources/03bool_fun_dict/dicts.py}
-	\pause
+	
 	Oder gelesen und gleichzeitig gelöscht werden.
 	\lstinputlisting[firstline=31,lastline=32]{resources/03bool_fun_dict/dicts.py}
 	
@@ -110,7 +110,7 @@
 
 \begin{frame}{Dictionaries - Paare hinzufügen / überschreiben}
 	Die meisten Typen können als Key benutzt werden. Listen und Dictionaries bilden hierzu eine Ausnahme, sie sind als Key nicht zulässig.
-	\lstinputlisting[firstline=23,lastline=30]{resources/03bool_fun_dict/dicts.py}
+	\lstinputlisting[firstline=23,lastline=28]{resources/03bool_fun_dict/dicts.py}
 \end{frame}
 
 \end{document}
