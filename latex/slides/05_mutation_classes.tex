@@ -73,12 +73,46 @@
 	\lstinputlisting[firstline=13,lastline=13]{resources/05mutation_klassen/einleitung_klassen.py}
 	Mit den Klammern wird angezeigt, dass man eine Funktion des Objekts ausführen will.
 	\lstinputlisting[firstline=14,lastline=14]{resources/05mutation_klassen/einleitung_klassen.py}
+	\begin{center}
+		\Large Funktion eines Objekts $\,\to\,$ \alert{Methode}
+	\end{center}
 \end{frame}
 \begin{frame}{Klassen / Objekte selbst definieren}
 	Um ein Objekt zu erhalten, muss zunächst eine Klasse definiert werden. Anschließend muss diese Klasse ausgeführt (instanziiert) werden. Die \codeline{\_\_init\_\_} Funktion wird jedesmal aufgerufen, wenn eine neue Instanz der Klasse erzeugt wird (Konstruktor).
 	\lstinputlisting[firstline=0,lastline=5]{resources/05mutation_klassen/einleitung_klassen.py}
 	\lstinputlisting[firstline=13,lastline=13]{resources/05mutation_klassen/einleitung_klassen.py}
 \end{frame}
+\begin{frame}{self}
+	In jeder Methode einer Klasse wird \codeline{self} als Eingabe mitgegeben. \codeline{self} repräsentiert eine Referenz zu dem jeweiligen Objekt, dass die Methode aufgerufen hat.\linebreak
+	In der \codeline{\_\_init\_\_} Methode kann \codeline{self} benutzt werden um die Attribute jeder Instanz der Klasse zu setzen. (Zeile 3)
+	\lstinputlisting[firstline=0,lastline=5]{resources/05mutation_klassen/einleitung_klassen.py}
+	\lstinputlisting[firstline=13,lastline=13]{resources/05mutation_klassen/einleitung_klassen.py}
+\end{frame}
+\begin{frame}{Methoden}
+	Methoden können nach dem gleichen Schema angelegt werden wie Funktionen, mit zwei Unterschieden.
+	\begin{itemize}
+		\item methoden enthalten mindestens \codeline{self} als Eingabe-Argument
+		\lstinputlisting[firstline=7,lastline=7]{resources/05mutation_klassen/einleitung_klassen.py}
+		\item methoden werden unter Klassen definiert
+		\lstinputlisting[firstline=6,lastline=7]{resources/05mutation_klassen/einleitung_klassen.py}
+	
+	\end{itemize}
+\end{frame}
+\begin{frame}{Magische Methoden}
+	Es gibt einige Methodennamen die in Klassen reserviert sind. Alle starten und enden mit doppelten Unterstrich. Diese Methoden heißen auch "magic methods", weil sie spezifische Dinge, scheinbar magisch, automatisch passieren lassen:
+	 \begin{center}
+	 	\codeline{\_\_*f\_name*\_\_} \linebreak\linebreak
+	 	\pause
+	 	\begin{tabular}{m{2.5cm} | m{6cm}}
+	 		Methodenname & Zweck \\ \hline\hline
+	 		\codeline{\_\_init\_\_} & Konstruktor: wird bei Objekt() aufgerufen \\ \hline
+	 		\codeline{\_\_str\_\_} & bestimmt Rückgabewert von str(Objekt) \\
+	 		\hline
+	 		\codeline{\_\_add\_\_} & bestimmt Rückgamewert Objekt + Objekt \\
+	 	\end{tabular}
+	 \end{center} 
+\end{frame}
+
 
 \section*{Beispiel}
 \begin{frame}{Beispiel}
