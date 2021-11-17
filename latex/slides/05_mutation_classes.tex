@@ -19,20 +19,26 @@
 
 \section{Wiederholung}
 \begin{frame}{Wiederholung}
-	
+	\textbf{Beim letzten Mal}
+	\begin{itemize}
+		\item Tupel
+		\lstinputlisting[firstline=2,lastline=2]{resources/04tuples/tuples.py}
+		\item Dictionary
+		\lstinputlisting[firstline=4,lastline=4]{resources/03bool_fun_dict/dicts.py}
+	\end{itemize}		
 \end{frame}
 
 \section{Gesamtübersicht}
 \begin{frame}{Gesamtübersicht}
 	\textbf{Themen der nächsten Stunden}
 	\begin{itemize}
-		\item Pointer Erklärung
-		\item Klassen
+		\item \alert{Referenzen Erklärung}
+		\item  \alert{Klassen}
 		\item Imports
 		\item Nützlich funktionen zur Iteration
 		\item Lambda
 		\item File handeling
-		\item Listcomphrehension
+		\item Listcomprehension
 		\item Unpacking
 		\item Dekoratoren
 	\end{itemize}
@@ -51,7 +57,7 @@
 	\lstinputlisting[firstline=1,lastline=2]{resources/05mutation_klassen/reference.py}
 	Führt man diesen Code aus, so legt Python den String 'Hallo Welt' irgendwo in den Arbeitsspeicher. 
 	
-	Die Variable \codeline{hallo} ist nun die Referenz. Greift man auf sie zu, so folgt Python der Referenz in den Arbeitsspeicher und liest dort das eigentliche Objekt aus.
+	Die Variable \codeline{hallo} ist nun die Referenz. Greift man auf sie zu, so folgt Python der Referenz in den Speicher und liest dort das eigentliche Objekt aus.
 \end{frame}
 
 \begin{frame}{Referenzen}
@@ -84,9 +90,9 @@
 \begin{frame}{Klassen und Objekte}
 	Menschen denken in Objekten, denen Eigenschaften und Funktionen zugeordet werden. \linebreak
 	\begin{center}
-		 \textbf{Ein Rennwagen ist schnell, und die Kuh macht "muh".} \linebreak
+		 \textbf{Ein Rennwagen ist schnell und die Kuh macht "muh".} \linebreak
 	\end{center}
-	Deswegen eignet sich dieses Konzept gut um Code intuitiv zu strukturieren.
+	Deswegen eignet sich dieses Konzept gut, um Code intuitiv zu strukturieren.
 \end{frame}
 \begin{frame}{bekannte Beispiele}
 	Listen: \codeline{liste.append('element')}
@@ -115,12 +121,12 @@
 \end{frame}
 \begin{frame}{self}
 	In jeder Methode einer Klasse wird \codeline{self} als Eingabe mitgegeben. \codeline{self} repräsentiert eine Referenz zu dem jeweiligen Objekt, dass die Methode aufgerufen hat.\linebreak
-	In der \codeline{\_\_init\_\_} Methode kann \codeline{self} benutzt werden um die Attribute jeder Instanz der Klasse zu setzen. (Zeile 3)
+	In der \codeline{\_\_init\_\_} Methode kann \codeline{self} benutzt werden, um die Attribute jeder Instanz der Klasse zu setzen. (Zeile 3)
 	\lstinputlisting[firstline=0,lastline=5]{resources/05mutation_klassen/einleitung_klassen.py}
 	\lstinputlisting[firstline=13,lastline=13]{resources/05mutation_klassen/einleitung_klassen.py}
 \end{frame}
 \begin{frame}{Methoden}
-	Methoden können nach dem gleichen Schema angelegt werden wie Funktionen, mit zwei Unterschieden.
+	Methoden können nach dem gleichen Schema angelegt werden, wie Funktionen, mit zwei Unterschieden.
 	\begin{itemize}
 		\item methoden enthalten mindestens \codeline{self} als Eingabe-Argument
 		\lstinputlisting[firstline=7,lastline=7]{resources/05mutation_klassen/einleitung_klassen.py}
@@ -130,7 +136,7 @@
 	\end{itemize}
 \end{frame}
 \begin{frame}{Magische Methoden}
-	Es gibt einige Methodennamen die in Klassen reserviert sind. Alle starten und enden mit doppelten Unterstrich. Diese Methoden heißen auch "magic methods", weil sie spezifische Dinge, scheinbar magisch, automatisch passieren lassen:
+	Es gibt einige Methodennamen, die in Klassen reserviert sind. Alle starten und enden mit doppeltem Unterstrich. Diese Methoden heißen auch "magic methods", weil sie spezifische Dinge, scheinbar magisch, automatisch passieren lassen:
 	 \begin{center}
 	 	\codeline{\_\_*f\_name*\_\_} \linebreak\linebreak
 	 	\pause
