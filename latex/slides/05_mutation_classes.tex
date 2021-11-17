@@ -64,6 +64,22 @@
 	Python folgt \codeline{b} bis zu der Liste und fügt eine \texttt{2} an. Da \codeline{a} immer noch eine Referenz auf dieselbe Liste hat, wird die Veränderung auch ersichtlich, wenn wir uns \codeline{a} statt \codeline{b} anschauen.
 \end{frame}
 
+\begin{frame}{Mutable}
+	Das Beispiel aus der letzten Folie funktioniert so, weil Listen veränderlich (mutable) sind. Das heißt, die Liste selbst wird beim appenden verändert, sodass die Änderung bei allen Referenzen sichtbar wird. \alert{Die Referenzen selber ändern sich allerdings nicht.} Dieser Sachverhalt gilt für \textit{alle} veränderlichen Objekte.
+\end{frame}
+
+\begin{frame}{Immutable}
+	Unveränderliche (immutable) Typen, wie Integer oder Strings, verhalten sich anders.
+	\lstinputlisting[firstline=9,lastline=12]{resources/05mutation_klassen/reference.py}
+	Hier hat ein Integer zwei Referenzen (\codeline{a} und \codeline{b}). Nutzt man nun \codeline{b}, um auf den Integer etwas drauf zu addieren, so kann Python nicht einfach das bestehende Zahlenobjekt verändern, sondern ist gezwungen, ein neues zu erstellen. Anschließend wird die Referenz von \codeline{b} auf das neue Objekt gesetzt, es wird also die Referenz verändert und nicht das Objekt. Daher sind \codeline{a} und \codeline{b} nun nicht mehr das selbe Objekt.
+\end{frame}
+
+\begin{frame}{Listen und Referenzen}
+	Listen enthalten keine Objekte, sondern nur Referenzen auf diese. Die Objekte selber liegen irgendwo anders.
+	\lstinputlisting[firstline=1,lastline=5]{resources/05mutation_klassen/inner_list.py}
+	In diesem Beispiel verändert man die innere Liste unabhängig von der äußeren. Trotzdem wird die Veränderung auch in der großen Liste sichtbar, da man wieder nur mehrere Referenzen auf das selbe Objekt hat.
+\end{frame}
+
 \section{Klassen und Objekte}
 \begin{frame}{Klassen und Objekte}
 	Menschen denken in Objekten, denen Eigenschaften und Funktionen zugeordet werden. \linebreak
