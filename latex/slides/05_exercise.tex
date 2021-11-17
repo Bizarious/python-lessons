@@ -1,0 +1,43 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+% TODO Change the topic of the lesson
+\title{Referenzen - Übung}
+\date{18. November 2021}
+\begin{document}
+
+\maketitle
+
+% TODO: Add your content right below here.
+
+\begin{frame}{Referenzen - Übung}
+	\large\lstinputlisting[firstline=1, lastline=3]{../../exercise/exercise_05/ref.py}
+	a = \only<1>{?}\only<2>{\alert{'Hallo'}}
+	
+	b = \only<1>{?}\only<2>{\alert{'Hallo Welt'}}
+\end{frame}
+
+\begin{frame}{Referenzen - Übung}
+	\large\lstinputlisting[firstline=5, lastline=7]{../../exercise/exercise_05/ref.py}
+	a = \only<1>{?}\only<2>{\alert{[1, [1]]}}
+\end{frame}
+
+\begin{frame}{Referenzen - Übung}
+	\large\lstinputlisting[firstline=9, lastline=13]{../../exercise/exercise_05/ref.py}
+	a = \only<1>{?}\only<2>{\alert{[42, ['hi', False], (1, 5)]}}
+	
+	b = \only<1>{?}\only<2>{\alert{[5, ['hi', False], (1, 5), True]}}	
+\end{frame}
+
+\begin{frame}{Referenzen - Übung}
+	\large\lstinputlisting[firstline=15, lastline=18]{../../exercise/exercise_05/ref.py}
+	a = \only<1>{?}\only<2>{\alert{\{'liste': [1, 2, 3]\}}}
+	
+	b = \only<1>{?}\only<2>{\alert{[1]}}	
+\end{frame}
+
+\end{document}
