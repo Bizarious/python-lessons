@@ -26,10 +26,10 @@
 \begin{frame}{Gesamtübersicht}
 	\textbf{Themen der nächsten Stunden}
 	\begin{itemize}
-		\item \alert{Referenzen Erklärung}
+		\item Referenzen Erklärung
 		\item  \alert{Klassen}
-		\item Imports
-		\item Nützlich funktionen zur Iteration
+		\item \alert{Imports}
+		\item Nützliche Funktionen zur Iteration
 		\item Lambda
 		\item File handeling
 		\item Listcomprehension
@@ -42,10 +42,33 @@
 \begin{frame}{Vererbung}
 	
 \end{frame}
-\end{document}
 
-\section{Module}
+\section{Module - Einführung}
 \begin{frame}{Module}
+	Module sind Dateien, die Python-Ausdrücke und Definitionen enthalten. 
+	
+	Sie enden immer mit \alert{.py}. Diese Dateien kennen wir schon, nämlich als normale Scripte. Das Besondere ist jedoch, dass man diese Module als Objekt in sein eigentliches Script einbinden und nutzen kann.
+	
+\end{frame}
+
+\begin{frame}{Import}
+	Über das \codeline{import}-Statement kann man Module in sein Script einfügen. Es gibt zwei Möglichkeiten, dieses Statement zu verwenden.
+	
+	 Im Folgenden gehen wir davon aus, dass sich das ausgeführte Script im selben Verzeichnis wie die Datei \texttt{mein\_modul.py} befindet. In der Datei \texttt{mein\_modul.py} soll es eine Klasse namens \texttt{ImportiereMich} geben.
+	 \pause
+	
+	\textbf{Möglichkeit 1:}
+		\lstinputlisting[firstline=0,lastline=2]{resources/06_inheritance_modules/modules.py}
+		\pause
+	\textbf{Möglichkeit 2:}
+		\lstinputlisting[firstline=4,lastline=5]{resources/06_inheritance_modules/modules.py}
+	
+\end{frame}
+
+\begin{frame}{Import}
+	Nutzt man bei diesem Beispiel Möglichkeit 1, so verhält sich das Modul wie ein normales Objekt.
+	\lstinputlisting[firstline=0,lastline=2]{resources/06_inheritance_modules/modules.py}
+	Mit dem \codeline{.} kann man auf Attribute und Methoden zugreifen, was hier nun Funktionen, Klassen und Variablen sind.
 	
 \end{frame}
 \end{document}
