@@ -21,3 +21,6 @@ a = [4, 5, 6]
 b = f(a)
 print(a)
 print(b)
+
+def f(liste):
+    ???
