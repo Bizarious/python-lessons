@@ -53,13 +53,3 @@ class Panzer(Fahrzeug):
 
     def info(self):
         return super().info() + f" Munition: {self.anzahl_munition}"
-
-l = [PKW(4), LKW(5)]
-for i in l:
-    print(i.info())
-
-p = Panzer(3)
-p.schiessen()
-p.schiessen()
-p.schiessen()
-p.schiessen()
