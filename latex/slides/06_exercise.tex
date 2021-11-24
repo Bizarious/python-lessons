@@ -12,9 +12,14 @@
 
 \maketitle
 
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
 % TODO: Add your content right below here.
 
-\begin{frame}{Referenzen - Übung 1}
+\section{Übung 1}
+\begin{frame}{Referenzen - Übung 1.1}
 	\large\lstinputlisting[firstline=1, lastline=5]{../../exercise/exercise_06/ref.py}
 	a = \only<1>{?}\only<2>{\alert{[ [1, 5], [1, 5] ]}}
 	
@@ -22,12 +27,12 @@
 \end{frame}
 
 
-\begin{frame}{Referenzen - Übung 2}
+\begin{frame}{Referenzen - Übung 1.2}
 	\large\lstinputlisting[firstline=8, lastline=12]{../../exercise/exercise_06/ref.py}
 	a = \only<1>{?}\only<2>{\alert{[2, 3]}}
 \end{frame}
 
-\begin{frame}{Referenzen - Übung 3}
+\begin{frame}{Referenzen - Übung 1.3}
 	\only<1>{
 		\large\lstinputlisting[firstline=25, lastline=26]{../../exercise/exercise_06/ref.py}
 		
@@ -49,5 +54,52 @@
 	b = [4, 6]
 \end{frame}
 
+\section{Übung 2}
+\begin{frame}{Klassen - Übung 2}
+	\begin{itemize}
+		\item[1.] Definiere eine Klasse \codeline{Fahrzeug} mit folgenden Eigenschaften: 
+		\begin{itemize}
+			\item Attribute: \codeline{speed}, \codeline{preis}
+			\item Methode: \codeline{hupen()} soll 'Huuup' ausgeben
+			\item Methode: \codeline{info()} soll einen String mit Preis und Geschwindigkeit zurückgeben (!nicht printen sondern zurückgeben) 
+		\end{itemize}
+		
+		\item[2.] Füge eine weitere Methode \alert{fahren(dauer)} hinzu, die eine \alert{Dauer} entgegen nimmt. Sie soll die Distanz zurückgeben, die in der angegebenen Zeit zurückgelegt wurde. $(dauer * speed)$
+	\end{itemize}
+	Überprüfe ob die Klasse funktioniert, indem du mehrere Instanzen in einer Liste erstellst und fahren bzw. hupen lässt:
+	\lstinputlisting[firstline=4, lastline=9]{../../exercise/exercise_06/class_list.py}
+
+\end{frame}
+
+
+\begin{frame}{Klassen - Übung 2}
+	\begin{itemize}
+		
+		
+		\item[3.] 
+		Definiere die Klasse \codeline{PKW} und \codeline{LKW}. Beide sollen von \codeline{Fahrzeug} erben.
+		Der LKW soll außerdem \codeline{hupen} überschreiben, (anderes Geräusch ausgeben).
+		
+		\item[4.] 
+			Erweiterung der Klassen.\linebreak
+			\codeline{PKW}
+			\begin{itemize}
+				\item \codeline{\_\_init\_\_} überschreiben, alle PKWs sollen 30.000 € kosten und 180 km/h schnell sein
+				\item zusätzliche Attribute: \codeline{personen\_zahl}
+				\item \codeline{info()} Methode überschreiben: soll personen\_zahl mit ausgeben
+			\end{itemize}
+		
+			\codeline{LKW}
+			\begin{itemize}
+				\item \codeline{\_\_init\_\_} überschreiben, alle LKWs sollen 200.000 € kosten und 80 km/h schnell sein
+				\item zusätzliche Attribute: \codeline{laderaum}
+				\item \codeline{info()} Methode überschreiben: soll laderaum mit ausgeben
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\textbf{Zusatz:} Definiere eine \codeline{Panzer} Klasse, die auch von Fahrzeug erbt. Panzer sollen 6.000.000 € kosten, 70 km/h schnell fahren und eine Anzahl von Munition haben. Außerdem soll ein Panzer \codeline{schießen} können. Er kann nur wenn Munition da ist schießen und verbraucht dabei eine Munition. Beim Schießen soll 'Bum!' ausgegeben werden.
+\end{frame}
 
 \end{document}
