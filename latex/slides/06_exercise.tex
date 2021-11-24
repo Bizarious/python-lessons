@@ -57,17 +57,25 @@
 \section{Übung 2}
 \begin{frame}{Klassen - Übung 2}
 	\begin{itemize}
-		\item[1.] Definiere eine Klasse \codeline{Fahrzeug} mit folgenden Eigenschaften: 
-		\begin{itemize}
-			\item Attribute: \codeline{speed}, \codeline{preis}
-			\item Methode: \codeline{hupen()} soll 'Huuup' ausgeben
-			\item Methode: \codeline{info()} soll einen String mit Preis und Geschwindigkeit zurückgeben (!nicht printen sondern zurückgeben) 
-		\end{itemize}
-		
-		\item[2.] Füge eine weitere Methode \alert{fahren(dauer)} hinzu, die eine \alert{Dauer} entgegen nimmt. Sie soll die Distanz zurückgeben, die in der angegebenen Zeit zurückgelegt wurde. $(dauer * speed)$
+		\only<1>{
+			\item[1.] Definiere eine Klasse \codeline{Fahrzeug} mit folgenden Eigenschaften: 
+			\begin{itemize}
+				\item Attribute: \codeline{speed}, \codeline{preis}
+				\item Methode: \codeline{hupen()} soll 'Huuup' ausgeben
+				\item Methode: \codeline{info()} soll einen String mit Preis und Geschwindigkeit zurückgeben (!nicht printen sondern zurückgeben) 
+			\end{itemize}
+		}
+		\only<2>{
+			\item[2.] Füge eine weitere Methode \alert{fahren(dauer)} hinzu, die eine \alert{Dauer} entgegen nimmt. Sie soll die Distanz zurückgeben, die in der angegebenen Zeit zurückgelegt wurde. $(dauer * speed)$
+		}
 	\end{itemize}
-	Überprüfe ob die Klasse funktioniert, indem du mehrere Instanzen in einer Liste erstellst und fahren bzw. hupen lässt:
-	\lstinputlisting[firstline=4, lastline=9]{../../exercise/exercise_06/class_list.py}
+	Überprüfe ob die Klasse funktioniert, indem du mehrere Instanzen in einer Liste erstellst und alle \only<2>{\codeline{fahren()}}\only<1>{\codeline{hupen()}} lässt:
+	
+	\only<1>{\lstinputlisting[firstline=4, lastline=8]{../../exercise/exercise_06/class_list.py}
+	}
+	\only<2>{\lstinputlisting[firstline=4, lastline=9]{../../exercise/exercise_06/class_list.py}
+	}
+	
 \end{frame}
 
 
