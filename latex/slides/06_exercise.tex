@@ -1,0 +1,53 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+% TODO Change the topic of the lesson
+\title{Referenzen - Übung}
+\date{18. November 2021}
+\begin{document}
+
+\maketitle
+
+% TODO: Add your content right below here.
+
+\begin{frame}{Referenzen - Übung 1}
+	\large\lstinputlisting[firstline=1, lastline=5]{../../exercise/exercise_06/ref.py}
+	a = \only<1>{?}\only<2>{\alert{[ [1, 5], [1, 5] ]}}
+	
+	b = \only<1>{?}\only<2>{\alert{[1, 5]}}
+\end{frame}
+
+
+\begin{frame}{Referenzen - Übung 2}
+	\large\lstinputlisting[firstline=8, lastline=12]{../../exercise/exercise_06/ref.py}
+	a = \only<1>{?}\only<2>{\alert{[2, 3]}}
+\end{frame}
+
+\begin{frame}{Referenzen - Übung 3}
+	\only<1>{
+		\large\lstinputlisting[firstline=25, lastline=26]{../../exercise/exercise_06/ref.py}
+		
+		\large\lstinputlisting[firstline=20, lastline=21]{../../exercise/exercise_06/ref.py}
+	}
+	\only<2>{
+		\large\lstinputlisting[firstline=15, lastline=21]{../../exercise/exercise_06/ref.py}
+		
+	}
+	\textbf{Start:}
+	
+	a = [4, 5, 6]
+	\linebreak
+	
+	\textbf{Ende:}
+	
+	a = [4, 5, 6]
+	
+	b = [4, 6]
+\end{frame}
+
+
+\end{document}
