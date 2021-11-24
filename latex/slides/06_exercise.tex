@@ -7,7 +7,7 @@
 % Presentation title
 % TODO Change the topic of the lesson
 \title{Referenzen - Übung}
-\date{18. November 2021}
+\date{25. November 2021}
 \begin{document}
 
 \maketitle
@@ -18,7 +18,7 @@
 \end{frame}
 % TODO: Add your content right below here.
 
-\section{Übung 1}
+\section{Übung 1 - Referenzen}
 \begin{frame}{Referenzen - Übung 1.1}
 	\large\lstinputlisting[firstline=1, lastline=5]{../../exercise/exercise_06/ref.py}
 	a = \only<1>{?}\only<2>{\alert{[ [1, 5], [1, 5] ]}}
@@ -54,7 +54,7 @@
 	b = [4, 6]
 \end{frame}
 
-\section{Übung 2}
+\section{Übung 2 - Vererbung}
 \begin{frame}{Klassen - Übung 2}
 	\begin{itemize}
 		\only<1>{
@@ -69,7 +69,7 @@
 			\item[2.] Füge eine weitere Methode \alert{fahren(dauer)} hinzu, die eine \alert{Dauer} entgegen nimmt. Sie soll die Distanz zurückgeben, die in der angegebenen Zeit zurückgelegt wurde. $(dauer * speed)$
 		}
 	\end{itemize}
-	Überprüfe ob die Klasse funktioniert, indem du mehrere Instanzen in einer Liste erstellst und alle \only<2>{\codeline{fahren()}}\only<1>{\codeline{hupen()}} lässt:
+	Überprüfe, ob die Klasse funktioniert, indem du mehrere Instanzen in einer Liste erstellst und alle \only<2>{\codeline{fahren()}}\only<1>{\codeline{hupen()}} lässt:
 	
 	\only<1>{\lstinputlisting[firstline=4, lastline=8]{../../exercise/exercise_06/class_list.py}
 	}
@@ -83,7 +83,7 @@
 	\begin{itemize}
 		\item[3.] 
 		Definiere die Klasse \codeline{PKW} und \codeline{LKW}. Beide sollen von \codeline{Fahrzeug} erben.
-		Der LKW soll außerdem \codeline{hupen} überschreiben, (anderes Geräusch ausgeben).
+		Der LKW soll außerdem \codeline{hupen} überschreiben (anderes Geräusch ausgeben).
 		
 		\item[4.] 
 			Erweiterung der Klassen.\linebreak
@@ -104,7 +104,7 @@
 \end{frame}
 
 \begin{frame}
-	\textbf{Zusatz:} Definiere eine \codeline{Panzer} Klasse, die auch von Fahrzeug erbt. Panzer sollen 6.000.000 € kosten, 70 km/h schnell fahren und eine Anzahl von Munition haben. Außerdem soll ein Panzer \codeline{schießen} können. Er kann nur wenn Munition da ist schießen und verbraucht dabei eine Munition. Beim Schießen soll 'Bum!' ausgegeben werden.
+	\textbf{Zusatz:} Definiere eine \codeline{Panzer} Klasse, die auch von Fahrzeug erbt. Panzer sollen 6.000.000 € kosten, 70 km/h schnell fahren und eine Anzahl von Munition haben. Außerdem soll ein Panzer \codeline{schießen} können, wobei Munition verbraucht wird. Ist keine Munition mehr vorhanden, so kann er keinen Schuss mehr abgeben. Beim Schießen soll zudem 'Feuer!' ausgegeben werden, wenn der Schuss erfolgt.
 \end{frame}
 
 \end{document}
