@@ -49,40 +49,85 @@
 \begin{frame}{Module - Erinnerung}
 \end{frame}
 
-\section{Nützliche Funktionen zur Iteration}
-\begin{frame}{enumerate}
-	Nimmt eine Liste entgegen und gibt sie als Tupelliste mit den jeweiligen Positionen in der Liste aus.
+%\section{Nützliche Funktionen zur Iteration}
+%\begin{frame}{enumerate}
+%	Nimmt eine Liste entgegen und gibt sie als Tupelliste mit den jeweiligen Positionen in der Liste aus.
+%	\begin{itemize}
+%		\centering\item[Eingabe:] \codeline{['A', 'B', 'C', 'D']}
+%		\centering\item[Ausgabe:] \codeline{[(0, 'A'), (1, 'B'), (2, 'C'), (3, 'D')]}
+%	\end{itemize}
+%\end{frame}
+%\begin{frame}{enumerate}
+%	Durch die Liste von Tupeln kann normal (tupelweise) iteriert werden.
+%	\lstinputlisting[firstline=0,lastline=1]{resources//07imports_iteration/iteration.py}
+%	\lstinputlisting[firstline=9,lastline=12]{resources//07imports_iteration/iteration.py}
+%	Aber auch indem man den Elementen der jeweiligen Tupel direkt namen zuweist.
+%	\lstinputlisting[firstline=3,lastline=6]{resources//07imports_iteration/iteration.py}
+%\end{frame}
+%
+%\begin{frame}{zip}
+%	Nimmt zwei (oder mehr) Listen entgegen und gibt sie als Tupelliste zurück, wobei Elemente an gleicher Position in der Liste in einem Tupel zusammengefasst werden.
+%	\begin{itemize}
+%		\centering\item[Eingabe:] \codeline{['A', 'B', 'C', 'D'], ['a', 'b', 'c', 'd']}
+%		\centering\item[Ausgabe:] \codeline{[('A', 'a'), ('B', 'b'), ('C', 'c'), ('D', 'd')]}
+%	\end{itemize}
+%	\textbf{Hinweis:} Die Ausgabeliste ist immer so lang wie die kürzeste eingegebene Liste. Elemente von längeren Listen werden ignoriert.
+%\end{frame}
+%\begin{frame}{zip}
+%	Wie bei enumerate kann durch die tuple,
+%	\lstinputlisting[firstline=15,lastline=16]{resources//07imports_iteration/iteration.py}
+%	\lstinputlisting[firstline=23,lastline=26]{resources//07imports_iteration/iteration.py}
+%	oder direkt durch die Elemente iteriert werden.
+%	\lstinputlisting[firstline=17,lastline=20]{resources//07imports_iteration/iteration.py}
+%\end{frame}
+%\begin{frame}{zip}
+%	\textbf{Beispiel mit mehr als zwei Listen:}
+%	\lstinputlisting[firstline=30,lastline=36]{resources//07imports_iteration/iteration.py}
+%\end{frame}
+
+\section{Keyword-Arguments}
+\begin{frame}{Keyword-Arguments}
+	Wenn man die Reihenfolge von Argumenten in einer Funktion übergehen will, kann man den Namen des Parameters direkt benutzen. Diese Argemente werden dann als \textbf{Keyword-Arguments} bezeichnet.
+	\lstinputlisting[firstline=0,lastline=2]{resources//07imports_iteration/keyword.py}
+	
 	\begin{itemize}
-		\centering\item[Eingabe:] \codeline{['A', 'B', 'C', 'D']}
-		\centering\item[Ausgabe:] \codeline{[(0, 'A'), (1, 'B'), (2, 'C'), (3, 'D')]}
+		\item[\textbf{Ziel:}] \codeline{X Y Z}
+		\lstinputlisting[firstline=4,lastline=4]{resources//07imports_iteration/keyword.py}
+		\item[\textbf{Ziel:}] \codeline{X Y Hallo}
+		\lstinputlisting[firstline=5,lastline=5]{resources//07imports_iteration/keyword.py}
+		besser mit Keyword-Arguments
+		\lstinputlisting[firstline=6,lastline=6]{resources//07imports_iteration/keyword.py}
 	\end{itemize}
-\end{frame}
-\begin{frame}{enumerate}
-	Durch die Liste von Tupeln kann normal (tupelweise) iteriert werden.
-	\lstinputlisting[firstline=0,lastline=1]{resources//07imports_iteration/iteration.py}
-	\lstinputlisting[firstline=9,lastline=12]{resources//07imports_iteration/iteration.py}
-	Aber auch indem man den Elementen der jeweiligen Tupel direkt namen zuweist.
-	\lstinputlisting[firstline=3,lastline=6]{resources//07imports_iteration/iteration.py}
 \end{frame}
 
-\begin{frame}{zip}
-	Nimmt zwei (oder mehr) Listen entgegen und gibt sie als Tupelliste zurück, wobei Elemente an gleicher Position in der Liste in einem Tupel zusammengefasst werden.
+\begin{frame}{Keyword-Arguments}
+	Es kann auch erzwungen werden, dass Argumente Keyword-Arguments sind. Alle Argumente nach \codeline{, *, } sind zwangsweise Keyword-Arguments.
+	\linebreak
+	\lstinputlisting[firstline=8,lastline=9]{resources//07imports_iteration/keyword.py}
 	\begin{itemize}
-		\centering\item[Eingabe:] \codeline{['A', 'B', 'C', 'D'], ['a', 'b', 'c', 'd']}
-		\centering\item[Ausgabe:] \codeline{[('A', 'a'), ('B', 'b'), ('C', 'c'), ('D', 'd')]}
+		\item[\textbf{Ziel:}] \codeline{X Y Z}
+		\lstinputlisting[firstline=11,lastline=11]{resources//07imports_iteration/keyword.py}
 	\end{itemize}
-	\textbf{Hinweis:} Die Ausgabeliste ist immer so lang wie die kürzeste eingegebene Liste. Elemente von längeren Listen werden ignoriert.
 \end{frame}
-\begin{frame}{zip}
-	Wie bei enumerate kann durch die tuple,
-	\lstinputlisting[firstline=15,lastline=16]{resources//07imports_iteration/iteration.py}
-	\lstinputlisting[firstline=23,lastline=26]{resources//07imports_iteration/iteration.py}
-	oder direkt durch die Elemente iteriert werden.
-	\lstinputlisting[firstline=17,lastline=20]{resources//07imports_iteration/iteration.py}
+
+\section{Itertools - Hilfe bei der Iteration}
+\begin{frame}{Itertools}
+	Itertools ist eine Bibliothek um die Iteration zu erleichtern. Unter anderem kann sie effizient große Iterationen durchführen.
+	
+	\lstinputlisting[firstline=1,lastline=1]{resources//07imports_iteration/itertools.py}
+	
+	\textbf{Beispiel:}
+	\lstinputlisting[firstline=4,lastline=4]{resources//07imports_iteration/itertools.py}
+	\lstinputlisting[firstline=8,lastline=12]{resources//07imports_iteration/itertools.py}
+	Mit Itertools:
+	\lstinputlisting[firstline=5,lastline=6]{resources//07imports_iteration/itertools.py}
 \end{frame}
-\begin{frame}{zip}
-	\textbf{Beispiel mit mehr als zwei Listen:}
-	\lstinputlisting[firstline=30,lastline=36]{resources//07imports_iteration/iteration.py}
+
+\begin{frame}{Itertools}
+	\lstinputlisting[firstline=4,lastline=4]{resources//07imports_iteration/itertools.py}
+	\lstinputlisting[firstline=18,lastline=22]{resources//07imports_iteration/itertools.py}
+	Mit Itertools:
+	\lstinputlisting[firstline=15,lastline=16]{resources//07imports_iteration/itertools.py}
 \end{frame}
 
 \end{document}
