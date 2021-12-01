@@ -36,11 +36,13 @@
 \section{Wiederholung}
 \begin{frame}{Wiederholung}
 	\textbf{Beim letzten Mal:}
-	\begin{itemize}
+	\centering\begin{itemize}
 		\item Referenzen
 		\item Klassen 
 		\lstinputlisting[firstline=0,lastline=3]{resources/05mutation_klassen/einleitung_klassen.py}
-	\end{itemize}	
+	\end{itemize}
+
+		
 \end{frame}
 
 \section{Module}
@@ -48,7 +50,39 @@
 \end{frame}
 
 \section{Nützliche Funktionen zur Iteration}
-\begin{frame}{...}
+\begin{frame}{enumerate}
+	Nimmt eine Liste entgegen und gibt sie als Tupelliste mit den jeweiligen Positionen in der Liste aus.
+	\begin{itemize}
+		\centering\item[Eingabe:] \codeline{['A', 'B', 'C', 'D']}
+		\centering\item[Ausgabe:] \codeline{[(0, 'A'), (1, 'B'), (2, 'C'), (3, 'D')]}
+	\end{itemize}
+\end{frame}
+\begin{frame}{enumerate}
+	Durch die Liste von Tupeln kann normal (tupelweise) iteriert werden.
+	\lstinputlisting[firstline=0,lastline=1]{resources//07imports_iteration/iteration.py}
+	\lstinputlisting[firstline=9,lastline=12]{resources//07imports_iteration/iteration.py}
+	Aber auch indem man den Elementen der jeweiligen Tupel direkt namen zuweist.
+	\lstinputlisting[firstline=3,lastline=6]{resources//07imports_iteration/iteration.py}
+\end{frame}
+
+\begin{frame}{zip}
+	Nimmt zwei (oder mehr) Listen entgegen und gibt sie als Tupelliste zurück, wobei Elemente an gleicher Position in der Liste in einem Tupel zusammengefasst werden.
+	\begin{itemize}
+		\centering\item[Eingabe:] \codeline{['A', 'B', 'C', 'D'], ['a', 'b', 'c', 'd']}
+		\centering\item[Ausgabe:] \codeline{[('A', 'a'), ('B', 'b'), ('C', 'c'), ('D', 'd')]}
+	\end{itemize}
+	\textbf{Hinweis:} Die Ausgabeliste ist immer so lang wie die kürzeste eingegebene Liste. Elemente von längeren Listen werden ignoriert.
+\end{frame}
+\begin{frame}{zip}
+	Wie bei enumerate kann durch die tuple,
+	\lstinputlisting[firstline=15,lastline=16]{resources//07imports_iteration/iteration.py}
+	\lstinputlisting[firstline=23,lastline=26]{resources//07imports_iteration/iteration.py}
+	oder direkt durch die Elemente iteriert werden.
+	\lstinputlisting[firstline=17,lastline=20]{resources//07imports_iteration/iteration.py}
+\end{frame}
+\begin{frame}{zip}
+	\textbf{Beispiel mit mehr als zwei Listen:}
+	\lstinputlisting[firstline=30,lastline=36]{resources//07imports_iteration/iteration.py}
 \end{frame}
 
 \end{document}
