@@ -5,7 +5,7 @@
 \input{../templates/course_information}
 
 % Presentation title
-\title{Module und erweiterte Iteration}
+\title{Module und Erweiterte Iteration}
 \date{2. Dezember 2021}
 
 \begin{document}
@@ -46,7 +46,34 @@
 \end{frame}
 
 \section{Module}
-\begin{frame}{Module - Erinnerung}
+\begin{frame}{Grundlegendes}
+	Erinnerung an Importe:
+	\lstinputlisting[firstline=1,lastline=2]{resources//07imports_iteration/imp.py}
+	oder:
+	\lstinputlisting[firstline=4,lastline=5]{resources//07imports_iteration/imp.py}
+	Importe funktionieren aus dem selben und aus niedrigeren Verzeichnissen ohne Probleme. Will man etwas aus einem höheren Verzeichniss importieren, so wird deutlich mehr Konfigurationsaufwand benötigt. Moderne IDEs nehmen das allerdings ab.	
+\end{frame}
+
+\begin{frame}{\_\_name\_\_ == '\_\_main\_\_'}
+	Importiert man ein Modul, so wird jeder Code sofort ausgeführt, der nicht in Funktionen oder Klassen verpackt ist.
+	
+	Um das zu verhindern, gibt es ein 'Protection Statement':
+	\lstinputlisting[firstline=7,lastline=8]{resources//07imports_iteration/imp.py}
+	Die \codeline{\_\_name\_\_}-Variable nimmt nur den Wert \codeline{'\_\_main\_\_'} an, wenn das Modul direkt ausgeführt wird. 
+	
+	Wird es nur importiert, so hat die Variable einen anderen Wert. Dadurch wird das, was durch die \codeline{if}-Abfrage geschützt wird, nicht ausgeführt.
+\end{frame}
+
+\begin{frame}{Standardbibliothek}
+	Die Standardbibliothek ist eine Sammlung von Modulen, die bereits nach der Installation von Python vorhanden ist.
+	
+	\textbf{Zwei Beispiele}
+	
+	\codeline{time:}
+	\lstinputlisting[firstline=10,lastline=12]{resources//07imports_iteration/imp.py}
+	\codeline{random:}
+	\lstinputlisting[firstline=14,lastline=16]{resources//07imports_iteration/imp.py}
+	In der \alert{\href{https://docs.python.org/3/library/}{Doku}} findet man alle verfügbaren Module.
 \end{frame}
 
 \section{Nützliche Funktionen zur Iteration}
