@@ -46,9 +46,47 @@
 
 \section{Unpacking}
 
-\begin{frame}{}
-
+\begin{frame}{Was ist Unpacking?}
+	Unpacking, bzw. Packing, bezeichnet eine Operation, mit der man Elemente eines \codeline{iterables} direkt an Variablen binden kann. Wir kennen das bereits von Tupeln:
+	\lstinputlisting[firstline=1,lastline=5]{resources//08_unpacking_lambda/unpacking.py}
+	Das funktioniert mit jedem \codeline{iterable}, also auch mit Listen zum Beispiel.
 \end{frame}
+
+\begin{frame}{Der *-Operator}
+	Der *-Operator gestattet das Zusammenfassen mehrerer Werte in einer einzigen Variable:
+	\lstinputlisting[firstline=7,lastline=8]{resources//08_unpacking_lambda/unpacking.py}
+	Auch wenn nach der Variable (hier \codeline{a}) nichts mehr folgt, muss trotzdem das Komma gesetzt werden.
+\end{frame}
+
+\begin{frame}{Der *-Operator}
+	Man kann den *-Operator auch zusammen mit dem herkömmlichen Packing/Unpacking verbinden. Python ermittelt selbst, welche Variable welche Werte bekommen muss:
+	\lstinputlisting[firstline=10,lastline=17]{resources//08_unpacking_lambda/unpacking.py}
+	\begin{description}
+		\item[Achtung] In so einem Ausdruck darf der *-Operator höchstens einmal vorkommen.
+	\end{description}
+\end{frame}
+
+\begin{frame}{Der *-Operator}
+	Man kann Unpacking auch in Verbindung mit Funktionen benutzen:
+	\lstinputlisting[firstline=19,lastline=23]{resources//08_unpacking_lambda/unpacking.py}
+	oder anders herum:
+	\lstinputlisting[firstline=25,lastline=29]{resources//08_unpacking_lambda/unpacking.py}
+\end{frame}
+
+\begin{frame}{Der *-Operator}
+	oder zusammen:
+	\lstinputlisting[firstline=31,lastline=35]{resources//08_unpacking_lambda/unpacking.py}
+	Hier wird das Tupel ausgepackt, sodass alle Elemente einzeln in die Funktion gegeben werden. Effektiv verhält es sich also wie in Beispiel 1.
+\end{frame}
+
+\begin{frame}{Der **-Operator}
+	Der **-Operator ist das Unpacking-Equivalent für Dictionarys. Dieser ist vor allem für Funktionen interessant, denn durch ihn kann man das Unpacking mit Keyword-Argumenten verbinden:
+	\lstinputlisting[firstline=37,lastline=41]{resources//08_unpacking_lambda/unpacking.py}
+	oder zusammen mit dem *-Operator:
+	\lstinputlisting[firstline=43,lastline=49]{resources//08_unpacking_lambda/unpacking.py}
+\end{frame}
+
+
 
 \section{Lamdba}
 
