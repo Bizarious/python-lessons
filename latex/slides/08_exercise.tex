@@ -6,7 +6,7 @@
 
 % Presentation title
 % TODO Change the topic of the lesson
-\title{Module - Übung}
+\title{Unpacking und Lambdas - Übung}
 \date{9. Dezember 2021}
 \begin{document}
 
@@ -18,11 +18,13 @@
 \end{frame}
 
 \section{Übung 1 - Unpacking}
-\begin{frame}
+\begin{frame}{Übung 1 - Unpacking}
 	Erstelle zwei Funktionen, \codeline{gerade} und \codeline{teilbar\_durch}, die ein bzw. zwei Argumente annehmen und einen Wahrheitswert zurückgeben, ob eine Zahl gerade ist, oder ob eine Zahl durch eine zweite teilbar ist.
 	
 	Nimm einen Input entgegen, der folgender Form entspricht:
+	
 	\codeline{<befehl\_name> argument1 argument2 ... argumentN}
+	
 	$<$befehl\_name$>$ kann dabei \codeline{gerade} oder \codeline{teilbar\_durch} als Wert annehmen.
 	Es soll die jeweilige Funktion, deren Name eingegeben wurde, mit den entsprechenden Argumenten ausgeführt werden.
 	
@@ -30,13 +32,13 @@
 	
 	\textbf{Hinweis}: die \codeline{String.split()} funktion kann benutzt werden, um einen String in eine Liste aus Strings aufzuteilen.
 \end{frame}
-\begin{frame}
+\begin{frame}{Übung 1 - Unpacking}
 	\textbf{Zusatz:}
-	Definiere eine dritte Funktion, \codeline{multiplizieren} die n Argumente entgegen nimmt und das erste Argument mit allen weiteren multipliziert. Es soll eine Liste der Länge n-1 als Ergebniss ausgegeben werden.
+	Definiere eine dritte Funktion, \codeline{multiplizieren}, die n Argumente entgegen nimmt und das erste Argument mit allen weiteren multipliziert. Es soll eine Liste der Länge n-1 als Ergebniss ausgegeben werden.
 \end{frame}
 
 \section{Übung 2 - Lambda}
-\begin{frame}
+\begin{frame}{Übung 2 - Lambda}
 	Nimm einen Input entgegen und splitte ihn an Leerzeichen zu einer Liste. Sortiere die Strings in der Liste aufsteigend nach Länge und gib die sortierte Liste aus.
 	Benutze dazu \codeline{sorted} oder \codeline{.sort()} und verwende eine \codeline{lambda} Funktion als \codeline{key}.
 \end{frame}
