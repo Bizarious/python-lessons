@@ -91,7 +91,7 @@
 \section{Lamdba}
 
 \begin{frame}{Funktionen als Objekte}
-	Funktionen können als Objekte behandelt werden, also z.B. als Argument in einer weiteren funktion angenommen werden.
+	Funktionen können als Objekte behandelt werden, also z.B. als Argument in einer weiteren Funktion angenommen werden.
 	\lstinputlisting[firstline=3,lastline=5]{resources//08_unpacking_lambda/funktionen.py}
 	\lstinputlisting[firstline=17,lastline=18]{resources//08_unpacking_lambda/funktionen.py}
 	Die Klammern machen dabei den Unterschied, ob das Funktions Objekt gemeint ist oder der Wert, den die Funktion zurück gibt.
@@ -101,14 +101,25 @@
 	Beispiel einer Funktion, die eine weitere Funktion \codeline{action} als Argument entgegen nimmt und ausführt. (und die Zeit der Ausführung ausgibt) 
 	\lstinputlisting[firstline=0,lastline=15]{resources//08_unpacking_lambda/funktionen.py}
 \end{frame}
-\begin{frame}{Lambda Funktionen}
-	Eine Lambda Funktion startet mit dem keyword \codeline{lambda}. Es folgen mit Komma getrennte Argumente, dann ein Doppelpunkt. Danach folgt was ausgegeben werden soll.
-	\lstinputlisting[firstline=0,lastline=15]{resources//08_unpacking_lambda/lamda_syntax.py}
-\end{frame}{Lambda Funktionen}
+
+\begin{frame}{Funktionen als Objekte}
+	Anwendungsfall: Eine Funktion wird nur einmal benötigt, und zwar als Argument.
+	\lstinputlisting[firstline=0,lastline=3]{resources//08_unpacking_lambda/idea_example_lambda.py}
+	Kann man die klassische Funktionsdefinition direkt als Argument reingeben ? \alert{NEIN! (und es sieht komisch aus)}
+	\lstinputlisting[firstline=6,lastline=10]{resources//08_unpacking_lambda/idea_example_lambda.py}
+	Stattdessen:
+	\lstinputlisting[firstline=4,lastline=4]{resources//08_unpacking_lambda/idea_example_lambda.py}	
+\end{frame}
 
 \begin{frame}{Lambda Funktionen}
-	\codeline{lambda} Funktionen verhalten sich wie gewöhnliche Funktionen, nur das sie in einer Zeile definiert werden können und damit keinen Namen brauchen. Desshalb nennt man sie auch \alert{anonyme Funktionen}.
+	Eine Lambda Funktion startet mit dem keyword \codeline{lambda}. Es folgen mit Komma getrennte Argumente, dann ein Doppelpunkt. Danach folgt, was ausgegeben werden soll.
+	\lstinputlisting[firstline=0,lastline=15]{resources//08_unpacking_lambda/lamda_syntax.py}
+	\codeline{lambda} Funktionen verhalten sich wie gewöhnliche Funktionen, nur das sie in einer Zeile definiert werden können und damit keinen Namen brauchen. Deshalb nennt man sie auch \alert{anonyme Funktionen}.
+\end{frame}
+
+\begin{frame}{Lambda Funktionen}
+	Beispiel \codeline{map}
 	\lstinputlisting[firstline=0,lastline=10]{resources//08_unpacking_lambda/lambda.py}
-\end{frame}{Lambda Funktionen}
+\end{frame}
 
 \end{document}
