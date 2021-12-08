@@ -90,8 +90,21 @@
 
 \section{Lamdba}
 
-\begin{frame}{}
-
+\begin{frame}{Funktionen als Objekte}
+	Funktionen können als Objekte behandelt werden, also z.B. als Argument in einer weiteren funktion angenommen werden.
+	\lstinputlisting[firstline=3,lastline=5]{resources//08_unpacking_lambda/funktionen.py}
+	\lstinputlisting[firstline=17,lastline=18]{resources//08_unpacking_lambda/funktionen.py}
+	Die Klammern machen dabei den Unterschied, ob das Funktions Objekt gemeint ist oder der Wert, den die Funktion zurück gibt.
 \end{frame}
+
+\begin{frame}{Funktionen als Objekte}
+	Beispiel einer Funktion, die eine weitere Funktion \codeline{action} als Argument entgegen nimmt und ausführt. (und die Zeit der Ausführung ausgibt) 
+	\lstinputlisting[firstline=0,lastline=15]{resources//08_unpacking_lambda/funktionen.py}
+\end{frame}
+
+\begin{frame}{Lambda Funktionen}
+	\codeline{lambda} Funktionen verhalten sich wie gewöhnliche Funktionen, nur das sie in einer Zeile definiert werden können und damit keinen Namen brauchen. Desshalb nennt man sie auch \alert{anonyme Funktionen}.
+	\lstinputlisting[firstline=0,lastline=10]{resources//08_unpacking_lambda/lambda.py}
+\end{frame}{Lambda Funktionen}
 
 \end{document}
