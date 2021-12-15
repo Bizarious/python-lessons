@@ -1,6 +1,7 @@
 from itertools import product
 from typing import Union
 import os
+import sys
 
 SPACE = "     "
 PIPE = "|"
@@ -8,9 +9,12 @@ UNDER = "_"
 MINUS = "-----"
 F_SPACE = "  {}  "
 
+
 def build_legende_top(field_number):
-    out = "  " + ((F_SPACE + UNDER) * field_number)
-    out = out[:-1] + '\n'
+    out = "  "
+    for i in range(field_number):
+        out += "  {}" + (" " * (3 - len(str(i)))) + UNDER
+    out = out[:-1] + "\n"
     return out.format(*[i for i in range(field_number)])
 
 
@@ -20,7 +24,6 @@ def build_pipeline(field_number, current_line=None):
     else:
         out = str(current_line)
         out += " " * (2 - len(str(current_line)))
-
 
     for i in range(field_number - 1):
         if current_line is not None:
@@ -134,12 +137,12 @@ class Board:
 
                 for x_c in x:
                     if len([field for field in fields if field.coords[0] == x_c]) == self._board_size:
-                        print("x")
+                        print("Waagerecht")
                         return player
 
                 for y_c in y:
                     if len([field for field in fields if field.coords[1] == y_c]) == self._board_size:
-                        print("y")
+                        print("Senkrecht")
                         return player
 
                 coords = [(i, i) for i in range(self._board_size)]
@@ -169,6 +172,7 @@ class TicTacToe:
 
     def play(self):
         while True:
+            os.system("clear")
             print(self._board)
             print("\n")
 
@@ -200,5 +204,10 @@ class TicTacToe:
 
 
 if __name__ == "__main__":
-    t = TicTacToe(board_size=3)
+    if len(sys.argv) == 1:
+        size = 3
+    else:
+        size = int(sys.argv[1])
+
+    t = TicTacToe(board_size=size)
     t.play()
