@@ -1,3 +1,5 @@
+from itertools import product
+
 
 SPACE = "     "
 PIPE = "|"
@@ -28,7 +30,7 @@ def build_minus_line(field_number):
     out += MINUS + '\n'
     return out
 
-def build_field(field_number=3):
+def build_field(field_dict, field_number=3):
     out = ""
 
     # first extra pipe line
@@ -43,5 +45,9 @@ def build_field(field_number=3):
     out += build_pipeline(field_number)
     out += build_pipeline(field_number, False)
 
-    # remove last '\n'
-    return out[:-1]
+    # remove last '\n
+    out = out[:-1]
+
+    # create format values
+    format_values = [field_dict[(x, y)] if (x, y) in field_dict.keys() else " " for x, y in product(field_number, repeat=2)]
+    return out.format(*format_values)
