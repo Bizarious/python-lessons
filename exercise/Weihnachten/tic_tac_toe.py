@@ -3,6 +3,19 @@ from typing import Union
 import os
 import sys
 
+
+class BColors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
 SPACE = "     "
 PIPE = "|"
 UNDER = "_"
@@ -70,6 +83,11 @@ def build_field(field_dict, field_number=3):
 
     # create format values
     format_values = [field_dict[(x, y)].content for x, y in product(range(field_number), repeat=2)]
+    for i, fv in enumerate(format_values):
+        if fv == "X":
+            format_values[i] = f"{BColors.OKBLUE}{fv}{BColors.ENDC}"
+        elif fv == "O":
+            format_values[i] = f"{BColors.FAIL}{fv}{BColors.ENDC}"
     return out.format(*format_values)
 
 
