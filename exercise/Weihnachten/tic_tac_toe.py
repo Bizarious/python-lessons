@@ -4,20 +4,32 @@ import os
 
 SPACE = "     "
 PIPE = "|"
+UNDER = "_"
 MINUS = "-----"
 F_SPACE = "  {}  "
 
+def build_legende_top(field_number):
+    out = "  " + ((F_SPACE + UNDER) * field_number)
+    out = out[:-1] + '\n'
+    return out.format(*[i for i in range(field_number)])
 
-def build_pipeline(field_number, with_format=True):
-    out = ""
+
+def build_pipeline(field_number, current_line=None):
+    if current_line is None:
+        out = " " * 2
+    else:
+        out = str(current_line)
+        out += " " * (2 - len(str(current_line)))
+
+
     for i in range(field_number - 1):
-        if with_format:
+        if current_line is not None:
             out += F_SPACE
         else:
             out += SPACE
         out += PIPE
     # last empty spaces
-    if with_format:
+    if current_line is not None:
         out += F_SPACE + '\n'
     else:
         out += SPACE + '\n'
@@ -25,7 +37,7 @@ def build_pipeline(field_number, with_format=True):
 
 
 def build_minus_line(field_number):
-    out = ""
+    out = "  "
     for i in range(field_number - 1):
         out += MINUS + PIPE
     # last minuses
@@ -36,17 +48,19 @@ def build_minus_line(field_number):
 def build_field(field_dict, field_number=3):
     out = ""
 
+    # legende top
+    out += build_legende_top(field_number)
     # first extra pipe line
-    out += build_pipeline(field_number, False)
+    out += build_pipeline(field_number)
 
     # middle part: minus and pipe lines in succession
     for i in range(field_number - 1):
-        out += build_pipeline(field_number)
+        out += build_pipeline(field_number, i)
         out += build_minus_line(field_number)
 
     # last two pipe lines
+    out += build_pipeline(field_number, field_number-1)
     out += build_pipeline(field_number)
-    out += build_pipeline(field_number, False)
 
     # remove last '\n
     out = out[:-1]
@@ -186,5 +200,5 @@ class TicTacToe:
 
 
 if __name__ == "__main__":
-    t = TicTacToe(board_size=7)
+    t = TicTacToe(board_size=3)
     t.play()
