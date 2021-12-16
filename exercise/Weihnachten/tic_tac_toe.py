@@ -2,9 +2,8 @@ from itertools import product
 from typing import Union
 import os
 import sys
-from events import events
+from events import events, EmptyEvent
 from random import choice, random
-
 
 EVENT_PERCENTAGE = 20
 
@@ -80,7 +79,7 @@ def build_field(field_dict, field_number=3):
         out += build_minus_line(field_number)
 
     # last two pipe lines
-    out += build_pipeline(field_number, field_number-1)
+    out += build_pipeline(field_number, field_number - 1)
     out += build_pipeline(field_number)
 
     # remove last '\n
@@ -106,10 +105,10 @@ class FieldCoordError(Exception):
 
 class Field:
     def __init__(self, *coords: int, board):
-        self._content = " "
         self._board = board
         self._coords = coords
         self._event = self._generate_event()
+        self._content = self._event.symbol
 
     def __repr__(self):
         return self._content
@@ -117,6 +116,7 @@ class Field:
     def _generate_event(self):
         if random() < (EVENT_PERCENTAGE / 100):
             return choice(events)(self._board)
+        return EmptyEvent(self._board)
 
     @property
     def content(self):
@@ -124,10 +124,12 @@ class Field:
 
     @content.setter
     def content(self, content):
-        if self._content != " ":
+        if self._content != " " and self._content != "?":
             raise FieldContentError("Field is already set")
         if content == "X" or content == "O":
             self._content = content
+            if self._event:
+                self._board.next_event = self._event
             return
         raise RuntimeError(f'"{content}" is not a valid character')
 
@@ -143,6 +145,7 @@ class Board:
         self._board_size = board_size
         for i, j in product(range(board_size), repeat=2):
             self._fields[(i, j)] = Field(i, j, board=self)
+        self.next_event = EmptyEvent(self)
 
     def __repr__(self):
         return build_field(self._fields, self._board_size)
@@ -201,8 +204,13 @@ class TicTacToe:
     def play(self):
         while True:
             os.system("clear")
+            self._board.next_event.execute()
+
             print(self._board)
             print("\n")
+
+            self._board.next_event.message()
+            self._board.next_event = EmptyEvent(self._board)
 
             result = self._board.check_win()
             if result is not None:

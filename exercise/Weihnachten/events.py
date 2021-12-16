@@ -1,25 +1,29 @@
-from abc import ABC, abstractmethod
-
-
-class Event(ABC):
+class EmptyEvent:
     weight = 0
+    symbol = " "
 
     def __init__(self, board):
         self._board = board
 
-    @abstractmethod
     def execute(self):
         pass
 
+    def message(self):
+        pass
 
-class TestEvent(Event):
+
+class TestEvent(EmptyEvent):
     weight = 1
+    symbol = "?"
 
     def __init__(self, board):
         super().__init__(board)
 
     def execute(self):
-        print("Executing Event")
+        pass
+
+    def message(self):
+        print("Executing EmptyEvent")
 
 
 _all_events = [TestEvent]
