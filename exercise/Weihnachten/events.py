@@ -26,10 +26,11 @@ class TestEvent(EmptyEvent):
         print("Executing EmptyEvent")
 
 
-_all_events = [TestEvent]
+all_events = [TestEvent]
 
 events = []
 
-for event in _all_events:
-    for _ in range(event.weight):
-        events.append(event)
+def calc_weights():
+    for event in _all_events:
+        for _ in range(event.weight):
+            events.append(event)
