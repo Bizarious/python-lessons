@@ -4,6 +4,8 @@ import os
 import sys
 
 
+EVENT_PERCENTAGE = 20
+
 class BColors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -98,15 +100,20 @@ class FieldContentError(Exception):
 class FieldCoordError(Exception):
     pass
 
-
+from events import events
+from random import choice, random
 class Field:
-
-    def __init__(self, *coords: int):
+    def __init__(self, *coords: int, board):
         self._content = " "
         self._coords = coords
+        self._event = self._generate_event()
 
     def __repr__(self):
         return self._content
+
+    def _generate_event(self):
+        if random() < (EVENT_PERCENTAGE / 100):
+            return random.choice(events)(self._board)
 
     @property
     def content(self):
@@ -132,7 +139,7 @@ class Board:
         self._fields = {}
         self._board_size = board_size
         for i, j in product(range(board_size), repeat=2):
-            self._fields[(i, j)] = Field(i, j)
+            self._fields[(i, j)] = Field(i, j, self)
 
     def __repr__(self):
         return build_field(self._fields, self._board_size)
