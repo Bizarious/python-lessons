@@ -46,8 +46,46 @@
 \end{frame}
 
 \section{Filehandeling}
-\begin{frame}{test}
+\begin{frame}{open Befehl}
+	\codeline{open()} ist eine builtin Funktion zum öffnen von Dateien
+	\lstinputlisting[firstline=0,lastline=1]{resources//09_filehandeling_listcomprehension/open_basics.py}
+	\codeline{open} hat verschiedene Bearbeitungsmodi
+	\begin{itemize}
+		\item[] \lstinputlisting[firstline=3,lastline=4]{resources//09_filehandeling_listcomprehension/open_basics.py}
+		\item[] \lstinputlisting[firstline=5,lastline=6]{resources//09_filehandeling_listcomprehension/open_basics.py}
+		\item[] \lstinputlisting[firstline=7,lastline=8]{resources//09_filehandeling_listcomprehension/open_basics.py}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{File Objekte}
 	
+	Die \codeline{open} Funktion gibt ein \codeline{File} Objekt zurück. Was kann man damit machen ?
+	\begin{itemize}
+		\item Die Datei schließen mit \codeline{f.close()} Dies sollte immer passieren wenn die Bearbeitung abgeschlossen ist.
+		\item Den kompletten Inhalt der Datei lesen mit \codeline{f.read()} 
+		\item Zeile für Zeile den Inhalt lesen mit \codeline{f.readline()}
+		\item In die Datei schreiben mit \codeline{f.write("content")}
+		\item Die Stelle verändern an der gelesen / geschrieben wird mit \codeline{f.seek(position)}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Bearbeitungsmodi}
+	Zusätzlich zu den normalen Modi gibt es den jeweiligen Modus mit einem \codeline{+}. Diese Modi haben mehr Rechte als der originale.
+	
+	\begin{tabular}{| m{4cm} || m{0.5cm} m{0.5cm} m{0.5cm} || m{0.5cm} m{0.5cm} m{0.5cm} |}
+		\hline
+		Rechte / Modus 				& r & w & a & r+ & w+ & a+ \\ \hline\hline
+		Read 				& \cmark &   &   & \cmark  & \cmark  & \cmark  \\ \hline
+		Write   			&   & \cmark & \cmark & \cmark  & \cmark  & \cmark  \\ \hline
+		Create  			&   & \cmark & \cmark &    & \cmark  & \cmark  \\ \hline
+		Am Anfang starten   & \cmark & \cmark &   & \cmark  & \cmark  &    \\ \hline
+		Am Ende starten   	&   &   & \cmark &    &    & \cmark  \\ \hline
+	\end{tabular}
+\end{frame}
+
+\begin{frame}{Tipp: with open()}
+	Mit \codeline{with open() as name:} wird die Datei automatisch wieder geschlossen, wenn das aufgemachte scope endet. \codeline{f.close()} kann nicht vergessen werden. 
+	\lstinputlisting[firstline=0,lastline=6]{resources//09_filehandeling_listcomprehension/with_open.py}
 \end{frame}
 
 \section{Listcomprehension}
