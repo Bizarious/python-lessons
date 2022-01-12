@@ -61,7 +61,7 @@
 	
 	Die \codeline{open} Funktion gibt ein \codeline{File} Objekt zurück. Was kann man damit machen ?
 	\begin{itemize}
-		\item Die Datei schließen mit \codeline{f.close()} Dies sollte immer passieren wenn die Bearbeitung abgeschlossen ist.
+		\item Die Datei schließen mit \codeline{f.close()} Dies sollte immer passieren, wenn die Bearbeitung abgeschlossen ist.
 		\item Den kompletten Inhalt der Datei lesen mit \codeline{f.read()} 
 		\item Zeile für Zeile den Inhalt lesen mit \codeline{f.readline()}
 		\item In die Datei schreiben mit \codeline{f.write("content")}
@@ -70,7 +70,7 @@
 \end{frame}
 
 \begin{frame}{Bearbeitungsmodi}
-	Zusätzlich zu den normalen Modi gibt es den jeweiligen Modus mit einem \codeline{+}. Diese Modi haben mehr Rechte als der originale.
+	Zusätzlich zu den normalen Modi gibt es den jeweiligen Modus mit einem \codeline{+}. Diese Modi haben mehr Rechte als der Originale.
 	
 	\begin{tabular}{| m{4cm} || m{0.5cm} m{0.5cm} m{0.5cm} || m{0.5cm} m{0.5cm} m{0.5cm} |}
 		\hline
@@ -89,8 +89,27 @@
 \end{frame}
 
 \section{Listcomprehension}
-\begin{frame}{test}
+\begin{frame}{Basics}
+	\alert{list comprehensions} sind eine Möglichkeit, Listen und andere \codeline{iterables} schneller und einfacher zu erstellen/manipulieren, als über herkömmliche Wege.
 	
+	Die folgenden beiden Codeabschnitte führen zum genau gleichen Ergebnis:	
+	\lstinputlisting[firstline=0,lastline=4]{resources//09_filehandeling_listcomprehension/comprehensions.py}
+	
+	\lstinputlisting[firstline=6,lastline=7]{resources//09_filehandeling_listcomprehension/comprehensions.py}
+\end{frame}
+
+\begin{frame}{Verwendung mit \codeline{if}}
+	Man kann 	\alert{list comprehensions} auch in Verbindung mit der \codeline{if}-Abfrage benutzen:
+	\lstinputlisting[firstline=9,lastline=11]{resources//09_filehandeling_listcomprehension/comprehensions.py}
+	
+	oder zusätzlich mit else:	
+	
+	\lstinputlisting[firstline=13,lastline=14]{resources//09_filehandeling_listcomprehension/comprehensions.py}
+\end{frame}
+
+\begin{frame}{Verwendung mit mehreren Schleifen}
+	Mehrere Schleifen zu verketten ist auch möglich:
+	\lstinputlisting[firstline=16,lastline=18]{resources//09_filehandeling_listcomprehension/comprehensions.py}
 \end{frame}
 
 \end{document}
