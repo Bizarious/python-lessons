@@ -32,14 +32,36 @@
 	\only<1>{x = ?}\only<2>{\alert{x ist eine Funktion der Form f(x) = (x + 5) * 2}}
 \end{frame}
 
-\section{Übung 2 - Filehandeling}
+\section{Übung 2 - Filehandeling / Listcomprehension}
 \begin{frame}{Übung 2 - Filehandeling}
-	test
+	\textbf{1.}
+	
+	Erstelle eine Textdatei, in der 'ab' steht. Schreibe weiterhin ein Programm, dass den Inhalt der Datein einliest, und anschließend wieder zurück in die Datei schreibt, sodass:
+	\begin{itemize}
+		\item alle \alert{'a'} durch \alert{'ab'}
+		\item alle \alert{'b'} durch \alert{'bb'}
+	\end{itemize}
+	ersetzt werden.
+	
+	Versuche den neuen String, der zurückgeschrieben wird, in einer Zeile zu erzeugen.(list comprehension)
 \end{frame}
-
-\section{Übung 3 - Listcomprehension}
-\begin{frame}{Übung 3 - Listcomprehension}
-	test
+\begin{frame}{Übung 2 - Filehandeling}
+	\textbf{2.}
+	
+	Schreibe nun 'abc' in die Textdatei. Das Programm soll nun:
+	\begin{itemize}
+		\item alle \alert{'a'} durch \alert{'abc'}
+		\item alle \alert{'b'} durch \alert{'bb'}
+		\item alle \alert{'c'} durch \alert{'cac'}
+	\end{itemize}
+	ersetzen.
+	Verwende ein Dictionary, um die Ersetzungsbeziehungen festzuhalten.
+	
+	Versuche auch diesmal, den neuen String in einer Zeile zu erzeugen. (abgesehen von der Dictionary Zeile)
+	
+	Probier das Programm aus, füge eigene Regeln hinzu.
+	
+	\textbf{Hinweis: \codeline{' '.join}}
 \end{frame}
 
 \end{document}
