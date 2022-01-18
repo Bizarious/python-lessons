@@ -5,7 +5,7 @@
 \input{../templates/course_information}
 
 % Presentation title
-\title{Dekoratoren und Fehlerbehandlung}
+\title{Dekoratoren und Exception-Behandlung}
 \date{13. Januar 2022}
 
 \begin{document}
@@ -30,7 +30,7 @@
 		\item File handeling
 		\item Listcomprehension
 		\item \alert{Dekoratoren}
-		\item \alert{Fehlerbehandlung}
+		\item \alert{Exception-Behandlung}
 	\end{itemize}
 \end{frame}
 
@@ -50,9 +50,46 @@
 	
 \end{frame}
 
-\section{Fehlerbehandlung}
-\begin{frame}{Fehlerbehandlung}
+\section{Exception-Behandlung}
+\begin{frame}{Exceptions}
+	\alert{Exceptions} sind Fehler, die das Programm wirft, wenn es einen unerwünschten Zustand erreicht hat. Jedem Programmierer werden sie früher oder später begegnen.
 	
+	Beispiel Exceptions sind:
+	\begin{itemize}
+		\item \codeline{Exception}(Basisklasse, von der alle Exceptions erben)
+		\item \codeline{RuntimeError}
+		\item \codeline{ZeroDivisionError}
+		\item \codeline{ValueError}
+		\item \codeline{KeyboardInterrupt}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\codeline{try} und \codeline{except}}
+	Mit den beiden Keywords \codeline{try} und \codeline{except} können Fehler abgefangen und behandelt werden:
+	\lstinputlisting[firstline=0,lastline=5]{resources/10_decorators_errors/errors.py}
+	Das Programm wird nicht abstürzen, es wird lediglich 'Da war ein Fehler' auf der Konsole ausgeben.
+\end{frame}
+
+\begin{frame}{\codeline{try} und \codeline{except}}
+	Man kann, ähnlich wie bei \codeline{if} und \codeline{elif}, auch verschiedene Fehler verschieden behandeln:
+	\lstinputlisting[firstline=7,lastline=14]{resources/10_decorators_errors/errors.py}
+\end{frame}
+
+\begin{frame}{\codeline{finally}}
+	Möchte man \textit{auf jeden Fall} etwas ausführen, egal, ob gerade ein Fehler kam, oder nicht, kann man das Keyword \codeline{finally} benutzen:
+	\lstinputlisting[firstline=28,lastline=34]{resources/10_decorators_errors/errors.py}
+\end{frame}
+
+\begin{frame}{Exceptions sind Objekte}
+	Wird in Python eine Exception geworfen, so ist diese als Objekt verfügbar:
+	\lstinputlisting[firstline=16,lastline=20]{resources/10_decorators_errors/errors.py}
+	oder allgemeiner:
+	\lstinputlisting[firstline=22,lastline=26]{resources/10_decorators_errors/errors.py}
+\end{frame}
+
+\begin{frame}{Selber Exceptions werfen}
+	Man kann auch selber Exceptions werfen, z.B., wenn man gewisse Eingaben unterbinden will. Dies wird mit dem Keyword \codeline{raise} gemacht:
+	\lstinputlisting[firstline=36,lastline=40]{resources/10_decorators_errors/errors.py}
 \end{frame}
 
 \end{document}
