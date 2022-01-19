@@ -3,7 +3,7 @@ def handle_errors(error, message):
         def handler_func(*args, **kwargs):
             try:
                 return func(*args, **kwargs)
-            except Exception as e:
+            except BaseException as e:
                 if isinstance(e, error):
                     print(message)
                 else:
