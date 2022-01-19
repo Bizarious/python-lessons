@@ -46,8 +46,51 @@
 \end{frame}
 
 \section{Dekoratoren}
-\begin{frame}{???}
+\begin{frame}{Dekoratoren}
+	Funktionen und Klassen Definitionen können "dekoriert" werden, indem über der jeweiligen definition \codeline{@<funktion>} eingefügt wird.
+	\lstinputlisting[firstline=8,lastline=10]{resources/10_decorators_errors/dekoratoren.py}
+	Hinter dem \codeline{@} muss dabei eine funktionsname stehen.	
+\end{frame}
+
+\begin{frame}
+	Funktionen die als Dekorator verwendet werden können, nehmen eine Funktion, Methode oder Klasse als Argument entgegen und geben das gleiche auch wieder aus. 
 	
+	Durch die \codeline{@} Notation wird die ursprüngliche Funktion mit dem Ausgabewert der Dekoratorfunktion überschrieben.
+	\lstinputlisting[firstline=12,lastline=15]{resources/10_decorators_errors/dekoratoren.py}
+	Dieser Code bewirkt das Gleiche, was auch mit der \codeline{@} Notation bewirkt würde. 
+\end{frame}
+
+\begin{frame}{Beispiel Funktionsdekorator}
+	Ein Funktionsdekorator nimmt eine Funktion entgegen, und gibt auch wieder eine Funktion aus.
+	\lstinputlisting[firstline=2,lastline=6]{resources/10_decorators_errors/dekoratoren.py}
+	\lstinputlisting[firstline=8,lastline=10]{resources/10_decorators_errors/dekoratoren.py}
+	In diesem Fall verändert die Dekoratorfunktion die Signatur der Ausgangsfunktion. 
+\end{frame}
+
+\begin{frame}{Anwendungsbeispiel Nebeneffekte}
+	Ziel eines Dekorators muss es aber nicht immer sein das Verhalten, der Funktion oder Klasse zu verändern. Er kann auch als Einstiegspunkt dienen.
+	\lstinputlisting[firstline=18,lastline=31]{resources/10_decorators_errors/dekoratoren.py}
+\end{frame}
+
+\begin{frame}{mehrere Dekoratoren}
+	Es können auch mehrere Dekoratoren angewendet werden:
+	\lstinputlisting[firstline=54,lastline=59]{resources/10_decorators_errors/dekoratoren.py}
+\end{frame}
+
+\begin{frame}
+	Definitionen für die benutzten Dekoratoren.
+	\lstinputlisting[firstline=40,lastline=52]{resources/10_decorators_errors/dekoratoren.py}
+\end{frame}
+
+\begin{frame}{mehrere Dekoratoren}
+	Es können auch mehrere Dekoratoren angewendet werden:
+	\lstinputlisting[firstline=54,lastline=59]{resources/10_decorators_errors/dekoratoren.py}
+	Ausgabe: \linebreak
+	\codeline{deko eins start} \linebreak
+	\codeline{deko zwei start} \linebreak
+	\codeline{hi} \linebreak
+	\codeline{deko zwei ende} \linebreak
+	\codeline{deko eins ende}
 \end{frame}
 
 \section{Exception-Behandlung}
