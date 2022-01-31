@@ -4,6 +4,7 @@ from time import time
 from numpy import array_split
 
 
+# Process einfach durch Thread erstetzen, wenn multithreading statt processing gewünscht ist
 class Worker(Process):
     def __init__(self, working_list: list[int], queue: Queue):
         super().__init__()
@@ -45,9 +46,4 @@ def main(number_of_threads: int = 4, list_size: int = 100):
 
 
 if __name__ == "__main__":
-    main(8, 10000000)
-
-
-
-
-
+    main(16, 80000000)
